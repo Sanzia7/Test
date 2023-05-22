@@ -1,0 +1,35 @@
+.wrapper {
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 4fr;
+   padding: 1%;
+   gap: 30%;
+   height: 76px;
+   min-width: 100vw;
+}
+
+.block {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2%;
+   width: 30%;
+   padding-left: 20%;
+}
+
+.nav a {
+   color: rgb(25, 46, 27);
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.nav .active {
+   color: #049a77;
+}
