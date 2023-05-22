@@ -1,9 +1,10 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div>
-      1212
+      <Footer />
     </div>
   );
 }
