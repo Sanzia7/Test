@@ -14,14 +14,14 @@ export default function Header() {
       <div className={s.wrapper}>
          <div className={s.block}>
             <img src={logo} alt="logo" />
-            <Link>Catalog</Link>
+            <Link className={s.category} to='/categories'>Catalog</Link>
          </div>
 
          <div className={s.block}>
             <nav className={s.nav}>
                <NavLink className={checkActivity} to='/'>Main Page</NavLink>
                <NavLink className={checkActivity} to='/products/all'>All products</NavLink>
-               <NavLink className={checkActivity} to='/products/all/sales'>All sales</NavLink>
+               <NavLink className={checkActivity} to='/products/sale'>All sales</NavLink>
             </nav>
             <Link to='/cart'><img src={cartImg} alt="shopbag" /></Link>
 

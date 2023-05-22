@@ -8,6 +8,19 @@
    min-width: 100vw;
 }
 
+.category {
+   border: none;
+   color: white;
+   background-color: #049a77;
+   width: 35%;
+   height: 60%;
+   border-radius: 5px;
+   text-decoration: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 .block {
    display: flex;
    justify-content: space-between;
