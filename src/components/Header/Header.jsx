@@ -12,7 +12,7 @@ export default function Header() {
 
    return (
       <div className={s.wrapper}>
-         <div className={s.block}>
+         <div className={s.logo}>
             <img src={logo} alt="logo" />
             <Link className={s.category} to='/categories'>Catalog</Link>
          </div>
@@ -24,9 +24,7 @@ export default function Header() {
                <NavLink className={checkActivity} to='/products/sale'>All sales</NavLink>
             </nav>
             <Link to='/cart'><img src={cartImg} alt="shopbag" /></Link>
-
          </div>
-
       </div>
    )
 }

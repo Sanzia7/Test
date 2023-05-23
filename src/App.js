@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
-import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import MainPage from './pages/MainPage/MainPage';
 import CategoriesPage from './pages/CategoriesPage/CategoriesPage'
@@ -8,6 +7,7 @@ import ProductsListPage from './pages/ProductsListPage/ProductsListPage'
 import ProductDescriptPage from './pages/ProductDescriptPage/ProductDescriptPage';
 import CartPage from './pages/CartPage/CartPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
+      
     </div>
   );
 }

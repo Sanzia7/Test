@@ -1,21 +1,32 @@
 .wrapper {
+   background-color: white;
    display: grid;
    grid-template-rows: 1fr;
    grid-template-columns: 1fr 4fr;
    padding: 1%;
-   gap: 30%;
-   height: 76px;
-   min-width: 100vw;
+   gap: 25%;
+   height: 120px;
+   min-width: 98%;
+}
+
+
+.logo {
+   display: flex;
+   justify-content: space-between;
+   gap: 12%;
+   align-items: center;
+   text-align: center;
 }
 
 .category {
    border: none;
-   color: white;
-   background-color: #049a77;
-   width: 35%;
-   height: 60%;
    border-radius: 5px;
+   color: white;
+   background-color: #339933;
+   width: 50%;
+   height: 48%;
    text-decoration: none;
+   font-size: 18px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -23,26 +34,24 @@
 
 .block {
    display: flex;
-   justify-content: space-between;
+   width: 100%;
    align-items: center;
 }
 
 .nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 2%;
-   width: 30%;
-   padding-left: 20%;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
 }
 
 .nav a {
-   color: rgb(25, 46, 27);
+   color: rgb(1, 3, 1);
    text-decoration: none;
    font-size: 18px;
    font-weight: 500;
 }
 
 .nav .active {
-   color: #049a77;
+   color: #339933;
+   ;
 }
