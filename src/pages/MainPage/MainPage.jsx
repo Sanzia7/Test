@@ -1,11 +1,12 @@
 import React from 'react'
-import Home from '../../components/Home/Home'
 import SaleBanner from '../../components/SaleBanner/SaleBanner'
+import s from './style.module.css'
+import HomeBoard from '../../components/Home/HomeBoard'
 
 export default function MainPage() {
    return (
       <div>
-         <Home />
+         <HomeBoard />
          <SaleBanner />
       </div>
    )

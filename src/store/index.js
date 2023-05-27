@@ -1,14 +1,12 @@
 import { applyMiddleware, combineReducers, createStore } from "redux"
 import thunk from 'redux-thunk'
-import { categoriesListReducer } from './categoriesListReducer'
-import { productsListReducer } from './productsListReducer'
-import { categoryPproductsReducer} from './categoryPproductsReducer'
-import { cartReducer } from './cartReducer'
+import { categoriesReducer } from "./reducer/categoriesReducer"
+import { productsReducer } from "./reducer/productsReducer"
+import { cartReducer } from "./reducer/cartReducer"
 
 const rootReducer = combineReducers({
-   categories: categoriesListReducer,
-   products: productsListReducer,
-   categoryProducts: categoryPproductsReducer,
+   categories: categoriesReducer,
+   products: productsReducer,
    cart: cartReducer
 })
 
