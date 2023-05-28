@@ -2,7 +2,7 @@ import React from 'react'
 import s from './style.module.css'
 import gnome from '../../media/gnome.png'
 
-export default function SaleBanner() {
+export default function OrderBanner() {
 
 
    return (

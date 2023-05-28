@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import flowers from '../../media/flowers.png'
 import ProductsPage from '../../pages/ProductsPage/ProductsPage'
 
-export default function HomeBoard() {
+export default function HomeBunner() {
    return (
       <div className={s.wrapper}>
          <div className={s.sale}>

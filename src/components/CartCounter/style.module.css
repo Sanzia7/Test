@@ -1,0 +1,29 @@
+.shopping_block {
+   position: relative;
+   width: 60px;
+   height: 60px;
+   border: none;
+   background: none;
+}
+
+.count_cart {
+   position: absolute;
+   min-width: 22px;
+   height: 22px;
+   text-align: center;
+   font-size: 12px;
+   background-color: white;
+   padding: 5px 5px;
+   border-radius: 50%;
+   background: #339933;
+   color: white;
+   right: 2px;
+   bottom: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.empty_cart {
+   display: none;
+}
