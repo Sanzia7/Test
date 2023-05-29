@@ -8,6 +8,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import Footer from './components/Footer/Footer'
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import ProductInfoPage from './pages/ProductInfoPage/ProductInfoPage';
+
 // import { useDispatch } from 'react-redux';
 // import { useEffect } from 'react';
 // import { fetchCategoriesList } from './store/asyncActions/categories';

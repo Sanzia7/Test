@@ -1,31 +1,23 @@
+
 .banner_container {
-   width: 100%;
-
-}
-
-.banner_container div {
-   height: 470px;
+   width: 100vw;
+   height: 450px;
    margin: 0 auto;
    background-image: url('./Nature_Beautiful.jpg');
    background-repeat: no-repeat;
    background-size: auto;
-   /* display: flex;
-   flex-direction: column;
-   justify-content: flex-end; */
    display: grid;
    grid-template-columns: max-content;
    gap: 30px;
-   padding: 120px 0;
-
+   padding: 50px;
 }
 
 .banner_container h1 {
-   /* margin: 0 auto; */
    font-size: 18px;
    text-transform: uppercase;
    font-weight: 600;
    color: gold;
-   padding: 20px;
+   padding: 0 25px;
 }
 
 .info {
@@ -36,5 +28,6 @@
 
 .info span {
    color: greenyellow;
+   font-size: 50px;
    font-weight: 900;
 }
