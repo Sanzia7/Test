@@ -34,8 +34,7 @@ function App() {
         <Route path='/cart' element={<CartPage />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
-      <Footer />
-      
+      <Footer />      
     </div>
   );
 }

@@ -1,7 +1,8 @@
-.header {
+.header_container {
    width: 100%;
+   margin: 0 auto;
    display: flex;
-   height: 120px;
+   height: 110px;
    align-items: center;
    justify-content: space-around;
    padding: 0 20px;
@@ -10,7 +11,9 @@
    top: 0;
    left: 0;
    z-index: 100;
-   background-color: rgb(242, 240, 227);
+   /* background-color: rgb(242, 240, 227); */
+   background-color: beige;
+
 }
 
 .catalog_container {
@@ -74,9 +77,10 @@
 }
 
 .nav a:hover {
-   text-decoration: underline dotted 2px orange;
+   text-decoration: underline dotted 2px rgb(255, 119, 0);
    color: darkorange;
    font-style: italic;
+   font-size: 20px;
    font-weight: 600;
 }
 
@@ -87,7 +91,7 @@
 } */
 
 
-.cart {
+.icon {
    width: 10%;
    display: flex;
    align-items: center;

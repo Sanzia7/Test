@@ -1,8 +1,9 @@
 import React from 'react'
 import s from './style.module.css'
 import Logo from '../../media/logo.png'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import CartCounter from '../CartCounter/CartCounter';
+import Container from '../Container/Container';
 
 export default function Header() {
 
@@ -15,34 +16,41 @@ export default function Header() {
    const isActive = ({ isActive }) => (isActive ? s.active : '');
 
    return (
-      <header className={s.header}>
-         <div className={s.catalog_container}>
-            <a className={s.logo_container} href="/">
-               <img src={Logo} alt="logo" />
-               <p>Green Peace</p>
-            </a>
-            <NavLink
-               className={s.catalog_btn}
-               to='/categories/all'
-            >
-               <button>Catalog</button>
-            </NavLink>
-         </div>
 
-         <nav className={s.nav}>
-            {links.map(({ id, label, ...item }) => (
+      
+      <Container>
+         <header className={s.header_container}>
+               <div className={s.catalog_container}>
+                  <a className={s.logo_container} href="/">
+                     <img src={Logo} alt="logo" />
+                     <p>Green Peace</p>
+                  </a>
                   <NavLink
-                     className={isActive}
-                     key={id}
-                     {...item}
+                     className={s.catalog_btn}
+                     to='/categories/all'
                   >
-                     {label}
+                     <button>Catalog</button>
                   </NavLink>
-               ))}
-         </nav>
-         <div className={s.cart}>
-            <CartCounter />
-         </div>
-      </header>
+               </div>
+
+               <nav className={s.nav}>
+                  {links.map(({ id, label, ...item }) => (
+                     <NavLink
+                        className={isActive}
+                        key={id}
+                        {...item}
+                     >
+                        {label}
+                     </NavLink>
+                  ))}
+               </nav>
+               <div className={s.icon}>
+                  <CartCounter />
+            </div>
+         </header>
+         </Container>
+      
+
+
    )
 }

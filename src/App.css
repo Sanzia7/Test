@@ -5,3 +5,22 @@
    margin: 0 auto;
    box-sizing: border-box;
 }
+
+body {
+   font-family: Montserrat sans-serif;
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+body,
+html {
+   height: 100%;
+   background-color: beige;
+}
+
+#root {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   flex: 1 1 auto;
+}
