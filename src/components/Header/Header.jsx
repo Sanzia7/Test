@@ -40,7 +40,10 @@ export default function Header() {
                      {label}
                   </NavLink>
                ))}
-            </nav>
+         </nav>
+         <button>
+            
+         </button>
             <div className={s.icon}>
                <CartCounter />
             </div>

@@ -19,22 +19,22 @@ export default function Footer() {
       <footer className={s.container_footer}>
          <div className={s.contacts}>
             <div className={s.block}>
-               <h2>Contacts:</h2>
-               <a target="_blank" className={s.tel} href="tel:+499999999999">
+               <h3>Contacts:</h3>
+               <a className={s.tel} href="tel:+499999999999">
                   {" "}
                   <FontAwesomeIcon icon={faPhone} />
                   <p>+49 999 999 99 91</p>
                </a>
             </div>
             <div className={s.block}>
-               <h2>Adress:</h2>
-               <a target="_blank" href="https://www.google.com/search?q=telranDE">
+               <h3>Adress:</h3>
+               <a href="https://www.google.com/search?q=telranDE">
                   <FontAwesomeIcon icon={faLocation} />
                   <p>Linkstraße 2/8 Etage, 10785 Berlin, Deutschland</p>
                </a>
             </div>
             <div className={s.block}>
-               <h2>Shop hours:</h2>
+               <h3>Shop hours:</h3>
                <p>
                   <FontAwesomeIcon icon={faClock} />
                   <p> 24 fours a day</p>
