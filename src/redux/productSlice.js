@@ -29,18 +29,41 @@ const productSlice = createSlice({
          }));
       },
       sortFilter: (state, action) => {
-         
-      }
-
-
-   }
-})
+         if (action.payload === 'default') {
+            state.products.sort((a, b) => a.id - b.id)
+         } else if (action.payload === 'up-price') {
+            state.products.sort((a, b) => (a.discont_price || a.price) - (b.discont_price || b.price))
+         } else if (action.payload === 'down-price') {
+            state.products.sort((a, b) => (b.discont_price || b.price)(a.discont_price || a.price))
+         }
+      },
+      priceFilter: (state, action) => {
+         const { fromPrice, toPrice } = action.payload
+         const defaultToPrice = toPrice === '' ? Infinity : toPrice
+         if (fromPrice || defaultToPrice) {
+            state.products = state.products.map((product) => ({
+               ...product,
+               priceShow:
+                  (product.discont_price || product.price) >= fromPrice
+                  && (product.discont_price || product.price) <= defaultToPrice
+            }))
+         } else
+            state.products = state.products.map((product) => ({
+               ...product,
+               selectShow: true,
+               priceShow: true,
+            }))
+      },
+   },
+});
 
 export default productSlice.reducer
 export const {
    loadProducts,
    searchProducts,
    resetSearchProducts,
+   sortFilter,
+   priceFilter,
 } = productSlice.actions
 
 
