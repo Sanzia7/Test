@@ -1,173 +1,137 @@
-.header_container {
-   width: 100%;
-   margin: auto;
-   display: flex;
-   height: 110px;
-   align-items: center;
-   justify-content: space-around;
-   gap: 30px;
-   padding: 0 20px;
-   box-sizing: border-box;
+.nav_wrapper {
    position: fixed;
    top: 0;
    left: 0;
+   right: 0;
    z-index: 100;
+}
+
+.nav {
+   height: 120px;
    background-color: beige;
-
-}
-
-.catalog_container {
-   min-width: 100px;
    display: flex;
+   gap: 30px;
+   justify-content: space-evenly;
    align-items: center;
-   gap: 40px;
-   justify-content: space-between;
+   box-sizing: border-box;
 }
 
-.logo_container {
-   min-width: 120px;
+.nav a {
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 14px;
+   text-transform: uppercase;
+   color: green;
+}
+
+.nav a:hover {
+   text-decoration: double 3px greenyellow;  
+   color: orangered;
+   font-size: 18px;
+   text-decoration: double;
+}
+
+.nav .logo {
+   min-width: 110px;
    display: flex;
    flex-direction: column;
    align-items: center;
    text-decoration: none;
 }
 
-.logo_container p {
-   font-size: 12px;
+/* .nav .logo p {
+   font-size: 14px;
    color: green;
-}
+} */
 
-.catalog_btn button {
+.btn {
+   position: relative;
+   text-decoration: none;
    background: green;
-   outline: #339933;
+   outline: none;
    border: none;
    border-radius: 12px;
    box-shadow: 3px 3px 4px gray;
-   min-width: 120px;
-   height: 40px;
+   padding: 2px 16px;
+   margin: 12px 20px;
    cursor: pointer;
    color: white;
    font-weight: 500;
    font-size: 18px;
    transition: all 0.3s ease-in;
+   min-width: 120px;
+   height: 40px;
 }
 
-.catalog_btn button:hover {
+.btn a {
+   color: white;
+}
+
+.btn:hover {
    background-color: greenyellow;
-   color: rgb(244, 117, 6);
+   color: orangered;
    font-size: 20px;
    box-shadow: 3px 3px 4px rosybrown;
    outline: none;
 }
 
-.nav {
-   width: 50%;
+.links {
    display: flex;
-   justify-content: space-between;
-   gap: 20px;
-   align-items: center;
-   justify-self: flex-end;
-   position: relative;
-   padding-left: 40px;
+   gap: 40px;
 }
 
-.nav a {
-   text-decoration: none;
-   font-weight: 500;
-   font-size: 16px;
-   text-transform: uppercase;
-   color: green;
-
-}
-
-.nav a:hover {
-   text-decoration: underline dotted 3px rgb(255, 119, 0);
-   color: darkorange;
-   font-style: italic;
-   font-size: 20px;
-   font-weight: 600;
-}
-
-/* .nav .active {
-   color: #339933;
-   font-style: italic;
-   font-weight: 600;
-} */
-
-
-.icon {
+.cart_icon {
    width: 15%;
-   /* position: relative; */
+   position: relative;
    display: flex;
-   /* gap: 10px; */
+   gap: 10px;
    align-items: center;
    justify-content: flex-end;
    padding-right: 40px;
 }
 
+.navBtn {
+   display: none;
+   border: none;
+   background-color: transparent;
+   color: orangered;
+   cursor: pointer;
+   font-size: 30px;
+}
+
+
 @media (max-width: 768px) {
-   .nav {
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
+   .navBtn {
+      display: block;
+   }
+
+   .links {
       opacity: 0;
       pointer-events: none;
+      flex-direction: column;
       position: absolute;
       right: 0;
-      top: 100px;
-      background-color: white;
+      top: 100%;
+      background: rgb(211, 212, 212);
+      background: linear-gradient(180deg,
+            rgba(211, 212, 212, 0.8) 0%,
+            rgba(131, 182, 163, 0.3) 100%);
+      padding: 30px;
+      border-radius: 0 0 5px 5px;
       transform: translateY(-100%);
       transition: transform, opacity;
-      transition-duration: 0.3s;
-      padding: 30px 0;
-      z-index: 1000;
+      transition-duration: 0.5s;
    }
 
-   .nav button {
-      z-index: 1;
-      height: 20px;
-      width: 20px;
-      display: block;
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      color: var(--gray-color);
-      font-size: 20px;
-   }
-
-   /* .nav button:hover {
-      color: #000000;
-   } */
-
-   .nav a {
-      width: 90%;
-      font-size: 22px;
-      padding: 15px;
-      color: gray;
-      border-bottom: 1px solid lightgray;
-   }
-
-   .nav a:hover {
-      text-decoration: none;
-      color: #000000;
-   }
-
-   .catalog_btn button {
-      min-width: 110px;
-      height: 35px;
-      font-size: 16px;
-   }
-
-   .catalog_container {
-      gap: 30px;
+   .nav_open {
+      opacity: 1;
+      pointer-events: auto; 
+      transform: translateY(0);
    }
 }
 
 @media (max-width: 390px) {
-   .catalog_btn {
+   .btn {
       display: none;
       pointer-events: auto;
    }
