@@ -1,0 +1,39 @@
+.wrapper_catalog {
+   padding: 50px 20px;
+   box-sizing: border-box;
+}
+.title_catalog {
+   display: flex;
+   align-items: center;
+   margin-top: 40px;
+   width: 50%;
+   justify-content: space-around;
+}
+.title_catalog h3 {
+   font-size: 30px;
+   font-weight: 600;
+   color: green;
+}
+.categories_catalog {
+   margin: 20px auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   grid-auto-rows: auto;
+   gap: 32px;
+}
+
+@media (max-width: 768px) {
+
+   .wrapper_catalog {
+      padding: 15px 20px;
+   }
+   .title_catalog{
+      width: 98%;
+      justify-content: space-between;
+   }
+   .categories_catalog {
+      margin: 20px auto;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+   }
+}
