@@ -21,7 +21,7 @@ const productSlice = createSlice({
                .includes(action.payload.toLowerCase())
          }))
       },
-      resetSearchProducts: (state, action) => {
+      resetSearchProducts: (state) => {
          state.products = state.products.map((product) => ({
             ...product,
             selectShow: true,
