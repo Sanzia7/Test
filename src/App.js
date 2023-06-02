@@ -6,26 +6,28 @@ import CartPage from "./pages/CartPage/CartPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
-import ProductInfoPage from "./pages/ProductItemPage/ProductItemPage";
+import CategoryItemPage from "./pages/CategoryItemPage/CategoryItemPage";
+import ProductItemPage from "./pages/ProductItemPage/ProductItemPage";
+import SalesPage from "./pages/SalesPage/SalesPage";
+
 
 function App() {
 
   return (
-    <>
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<CategoriesPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
-        <Route path="/product/:id" element={<ProductInfoPage />} />
-        <Route path="/categories" element={<CategoriesPage />} />
-        <Route path="/products/:title" element={<ProductsPage />} />
+        <Route path="/sales/all" element={<SalesPage />} />
+        <Route path="/categories/:id" element={<CategoryItemPage />} />
+        <Route path="/product/:id" element={<ProductItemPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/*" element={<NotFoundPage />} />
-        <Route path="/404" element={<NotFoundPage />} />
-        <Route path="/categories/:id" element={<ProductsPage />} />
+        <Route path="/*" element={<NotFoundPage />} />        
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
