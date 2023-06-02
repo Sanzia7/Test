@@ -43,9 +43,9 @@ export const productsReducer = (state = defaultState, action) => {
       
       case SORT_PRICE_UP_PRODUCTS:
          return [...state].sort((a, b) => {
-            const a_price = a.discont_price ? a.discont_price : a.price;
-            const b_price = b.discont_price ? b.discont_price : b.price;
-            return a_price - b_price
+            const priceA = a.discont_price ? a.discont_price : a.price;
+            const priceB = b.discont_price ? b.discont_price : b.price;
+            return priceA - priceB
          })
       
       case SORT_NAME_PRODUCTS:
