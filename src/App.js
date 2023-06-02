@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
 import CartPage from "./pages/CartPage/CartPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
@@ -15,7 +14,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/products/all" element={<ProductsPage />} />
         <Route path="/product/:id" element={<ProductInfoPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
