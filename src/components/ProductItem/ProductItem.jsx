@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './style.module.css'
 
-export default function ShoppingCart() {
+export default function ProductItem() {
    return (
-      <div>ShoppingCart</div>
+      <div>ProductItem</div>
    )
 }

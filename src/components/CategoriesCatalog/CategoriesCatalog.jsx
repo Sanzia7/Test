@@ -6,7 +6,7 @@ import ButtonGreen from '../UI/ButtonGreen/ButtonGreen'
 import CategoryItem from '../CategoryItem/CategoryItem'
 
 
-export default function Catalog() {
+export default function AllCategories() {
   const catalog = useSelector((state) => state.categories.categories)
     .slice()
     .sort(() => Math.random() - 0.5)
