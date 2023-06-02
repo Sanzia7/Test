@@ -4,7 +4,7 @@ import FirstOrdering from '../../components/FirstOrdering/FirstOrdering'
 
 
 
-export default function MainPage() {
+export default function HomePage() {
    return (
       <div>
          <HomeBanner />

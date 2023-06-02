@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import MainPage from "./pages/MainPage/MainPage";
+
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
 import CartPage from "./pages/CartPage/CartPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
-import ProductInfoPage from "./pages/ProductInfoPage/ProductInfoPage";
+import ProductInfoPage from "./pages/ProductItemPage/ProductItemPage";
 
 function App() {
 

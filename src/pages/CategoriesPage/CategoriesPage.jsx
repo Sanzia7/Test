@@ -1,26 +1,30 @@
-import React from 'react'
-import s from './style.module.css'
-import { useSelector } from 'react-redux'
-import CategoryItem from '../../components/CategoryItem/CategoryItem'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchCategories } from '../../asyncActions/categories'
+import CategoriesCatalog from '../../components/CategoriesCatalog/CategoriesCatalog'
+
 
 
 export default function CategoriesPage() {
-   const { categories } = useSelector((state) => state.categories)
 
+   const dispatch = useDispatch()
+   
+   useEffect(() => {
+      dispatch(fetchCategories())
+      window.scrollTo(0, 0)
+   }, [])
+
+   const categories = useSelector((store) => store.categories)
 
 
 
    return (
-      <div className={s.categories_wrapper}>
-         <h2>Categories</h2>
-         <div className={s.categories_container}>
-            {categories.map((elem) => {
-               <CategoryItem
-                  key={elem.id}
-                  {...elem}
-               />
-            })}
-         </div>
+      <div>
+         <CategoriesCatalog
+            categories={categories}
+            btn_show={false}
+            title='Categories'
+         />
       </div>
    )
 }
