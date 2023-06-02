@@ -15,7 +15,8 @@ import ProductInfoPage from "./pages/ProductInfoPage/ProductInfoPage";
 // import { fetchProductsList } from './store/asyncActions/products';
 
 function App() {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  
   // useEffect(() => {
   //   dispatch(fetchCategoriesList())
   //   dispatch(fetchProductsList())
@@ -28,8 +29,8 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
         <Route path="/product/:id" element={<ProductInfoPage />} />
-        <Route path="/categories/all" element={<CategoriesPage />} />
-        <Route path="/categories/:id" element={<ProductsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/products/:title" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/*" element={<NotFoundPage />} />
         <Route path="/404" element={<NotFoundPage />} />

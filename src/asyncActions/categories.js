@@ -1,22 +1,5 @@
-import axios from 'axios'
 import URL from './url'
-
-
-const getCategories = () => {
-   return axios.get(`${URL}/categories/all`)
-}
-
-const getCategoryItem = (id) => {
-   return axios.get(`${URL}/categories/${id}`)
-}
-
-export default { getCategories, getCategoryItem }
-
-
-
-// import { categoriesLoadAction } from "../reducer/categoriesReducer"
-
-// const categoriesURL = 'http://localhost:3333/categories/all'
+// const categoriesURL = URL + 'categories/all'
 
 // export const fetchCategoriesList = () => {
 //    return function (dispatch) {
@@ -25,3 +8,24 @@ export default { getCategories, getCategoryItem }
 //          .then(data = dispatch(categoriesLoadAction(data)))
 //    }
 // }
+
+
+
+
+//-----------------------------------------
+// import axios from 'axios'
+// import URL from './url'
+// const getCategories = () => {
+//    return axios.get(`${URL}/categories/all`)
+// }
+
+// const getCategoryItem = (id) => {
+//    return axios.get(`${URL}/categories/${id}`)
+// }
+
+// export default { getCategories, getCategoryItem }
+
+
+
+// import { categoriesLoadAction } from "../reducer/categoriesReducer"
+
