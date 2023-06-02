@@ -1,20 +1,23 @@
-.wrapper_catalog {
-   padding: 50px 20px;
-   box-sizing: border-box;
+.catalog_wrapper {
+   margin: 40px 30px 90px;
 }
-.title_catalog {
+
+.catalog_header {
    display: flex;
    align-items: center;
-   margin-top: 40px;
+   margin-bottom: 40px;
    width: 50%;
    justify-content: space-around;
+   gap: 100px;
 }
-.title_catalog h3 {
+
+.catalog_title {
    font-size: 30px;
    font-weight: 600;
    color: green;
 }
-.categories_catalog {
+
+.catalog_container {
    margin: 20px auto;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -22,16 +25,27 @@
    gap: 32px;
 }
 
+.catalog_container a {
+   text-decoration: none;
+   color: brown;
+   transition: all 0.3s ease;
+}
+.catalog_container a:hover {
+   color: green;
+}
+
 @media (max-width: 768px) {
 
-   .wrapper_catalog {
+   .catalog_wrapper {
       padding: 15px 20px;
    }
-   .title_catalog{
+
+   .catalog_header {
       width: 98%;
       justify-content: space-between;
    }
-   .categories_catalog {
+
+   .catalog_container {
       margin: 20px auto;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;

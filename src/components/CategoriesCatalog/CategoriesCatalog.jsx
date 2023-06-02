@@ -1,31 +1,33 @@
 import React from 'react'
 import s from './style.module.css'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import ButtonGreen from '../UI/ButtonGreen/ButtonGreen'
+import { NavLink } from 'react-router-dom'
 import CategoryItem from '../CategoryItem/CategoryItem'
+import ButtonLight from '../UI/ButtonLight/ButtonLight'
 
 
-export default function AllCategories() {
-  const catalog = useSelector((state) => state.categories.categories)
-    .slice()
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4)
-  
+export default function CategoriesCatalog({categories, btn_show, title}) {
 
   return (
-    <div className={s.wrapper_catalog}>
-      <div className={s.title_catalog}>
-        <h3>OUR CATALOG:</h3>
-        <Link to='/categories/all'>
-          <ButtonGreen text='All Categories' />
-        </Link>
+    <div className={s.catalog_wrapper} id='categories'>
+      <div className={s.catalog_header}>
+        <h2 className={s.catalog_title}>{title}</h2>
+        {btn_show && (
+          <NavLink to='/catalog'>
+            <ButtonLight text='All Categories'/>
+          </NavLink>
+        )}
       </div>
-      <div className={s.categories_catalog}>
-        {catalog.map((elem) => {
-          <CategoryItem key={elem.id} {...elem} />
-        })}
+      <div className={s.catalog_container}>
+        {categories.map((item) => (
+          <NavLink
+            key={item.id}
+            to={`/categories/${item.id}`}
+          >
+            <CategoryItem {...item} />
+          </NavLink>
+        ))}
       </div>
+
     </div>
   )
 }
