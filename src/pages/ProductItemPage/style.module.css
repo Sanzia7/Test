@@ -1,0 +1,82 @@
+.container {
+   margin: 30px 40px;
+}
+
+.container h2 {
+   color: gray;
+   font-size: 36px;
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+
+.info {
+   display: flex;
+   gap: 120px;
+   align-items: center;
+}
+
+.info img {
+   width: 100%;
+   object-fit: con;
+}
+
+.description {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   max-width: 400px;
+}
+
+.price_box {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.sale_price {
+   font-weight: 600;
+   font-size: 30px;
+}
+
+.price {
+   color: #8b8b8b;
+   text-decoration: line-through;
+   font-size: 24px;
+   font-weight: 500;
+}
+
+.sale_value {
+   font-size: 28px;
+   color: pink;
+   font-weight: 600;
+}
+
+.description button {
+   width: 340px;
+   height: 86px;
+   background-color: green;
+   border-radius: 10px;
+   border: 2px solid green;
+   color: white;
+   font-weight: 600;
+   font-size: 28px;
+   transition: all 0.4s ease;
+   cursor: pointer;
+}
+
+.description button:hover {
+   background-color: white;
+   color: green;
+}
+
+h4 {
+   padding-top: 40px;
+   border-top: 1px dashed #8b8b8b;
+   font-weight: 600;
+   font-size: 24px;
+}
+
+p {
+   font-weight: 500;
+   font-size: 18px;
+}
