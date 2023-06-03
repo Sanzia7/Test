@@ -1,0 +1,94 @@
+.cart {
+   position: relative;
+   display: flex;
+   gap: 30px;
+   padding: 40px 0;
+   border-bottom: 1px solid #a7a7a7;
+}
+
+.cart img {
+   width: 200px;
+   border-radius: 8px;
+   height: 180px;
+   object-fit: cover;
+}
+
+.counter {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.title {
+   font-weight: 600;
+   font-size: 24px;
+   color: rgb(191, 139, 6);
+   max-width: 320px;
+}
+
+.box_counter {
+   display: flex;
+   gap: 30px;
+   border: 1px solid gray;
+   border-radius: 10px;
+   padding: 5px 15px;
+   align-items: center;
+}
+
+.box_counter button {
+   background-color: transparent;
+   border: none;
+   font-size: 36px;
+   line-height: 20px;
+   transition: all 0.5s ease;
+   cursor: pointer;
+}
+
+.box_counter button:hover {
+   color: green;
+}
+
+.count {
+   font-size: 22px;
+   font-weight: 600;
+   width: 30px;
+   text-align: center;
+}
+
+.sale_price,
+.price {
+   align-self: center;
+}
+
+.sale_price {
+   font-weight: 600;
+   width: 90px;
+}
+
+.price {
+   font-weight: 500;
+   color: #8b8b8b;
+   text-decoration: line-through;
+   padding-right: 70px;
+}
+
+.close_btn {
+   font-size: 20px;
+   cursor: pointer;
+   position: absolute;
+   top: 20px;
+   right: 0;
+}
+
+@media (max-width: 678px) {
+   .cart {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .counter {
+      align-items: center;
+      text-align: center;
+   }
+}
