@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import Cart from '../Cart/Cart'
 
 
-export default function CartShoping() {
+export default function CartShopping() {
 
    const cart = useSelector(store = store.cart)
 

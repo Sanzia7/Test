@@ -25,7 +25,7 @@ export default function ProductItem({ product }) {
                <p className={s.sale_price}>
                   {discont_price !== null
                      ? discont_price
-                     : price}$
+                     : price} $
                </p>
                {discont_price &&
                   <p className={s.price}>{price}$</p>}
