@@ -24,9 +24,9 @@ export default function CartOrder() {
    return (
       <div className={s.order}>
          <h2>Order details:</h2>
-         <div>
-            <p>Total:</p>
-            <p>{totalSum} $</p>
+         <div className={s.sum}>
+            <p className={s.text}>Total:</p>
+            <p className={s.amount}>{totalSum} $</p>
          </div>
          <form onSubmit={onSubmit}>
             <input type="tel"

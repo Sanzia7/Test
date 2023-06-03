@@ -1,0 +1,49 @@
+.order {
+   display: flex;
+   flex-direction: column;
+   padding: 25px;
+   max-width: 500px;
+   align-self: center;
+   gap: 50px;
+   border: 2px solid black;
+   border-radius: 20px;
+}
+
+.order h2 {
+   font-size: 28px;
+   font-weight: 600;
+}
+
+.sum {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.text {
+   font-weight: 500;
+   font-size: 24px;
+}
+
+.amount {
+   font-weight: 600;
+   font-size: 32px;
+}
+
+form {
+   width: 450px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+form input {
+   height: 70px;
+   border: 1px solid black;
+   padding-left: 25px;
+   border-radius: 20px;
+   outline: none;
+   font-size: 32px;
+   width: 100%;
+   background-color: white;
+}
