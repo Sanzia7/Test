@@ -1,0 +1,6 @@
+.category_container {
+   margin: 0 30px;
+   display: flex;
+   justify-content: space-between;
+
+}
