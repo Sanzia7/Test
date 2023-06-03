@@ -1,7 +1,9 @@
 import React from 'react';
+import s from './SaleProducts'
 import { useSelector } from 'react-redux';
+import AllProducts from '../AllProducts/AllProducts'
 
-function SaleProducts() {
+ export default function SaleProducts() {
    const products = useSelector(store => store.products)
    const productsShow = []
 
@@ -10,15 +12,19 @@ function SaleProducts() {
       for (let i = 0; i < 3; i++) {
          let indexRandom = Math.round(Math.random() * saleProducts.length)
          productsShow.push(saleProducts[indexRandom])
-         saleProducts.splice(indexRandom)
+         saleProducts.splice(indexRandom, 1)
       }
    }
 
    return (      
-      <div>
-         <AllProducts/>
+      <div className={s.container} id='sales'>
+         <AllProducts
+            products={productsShow}
+            title='Sale'
+            location='sale'
+            filterShow={false}
+         />
       </div>
    );
 }
 
-export default SaleProducts;
