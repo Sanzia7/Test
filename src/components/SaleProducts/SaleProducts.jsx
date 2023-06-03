@@ -16,7 +16,7 @@ function SaleProducts() {
 
    return (      
       <div>
-         <AllProducts />
+         <AllProducts/>
       </div>
    );
 }

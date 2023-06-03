@@ -50,7 +50,7 @@ label {
    margin-right: 82px;
 }
 
-@media (max-width: 470px) {
+@media (max-width: 420px) {
    select {
       margin-left: 22px;
       width: 184px;

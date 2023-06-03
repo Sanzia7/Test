@@ -15,3 +15,26 @@
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    gap: 30px;
 }
+
+@media (max-width:1200px) {
+   .products {
+      grid-template-columns: repeat(3, 300px);
+      justify-content: space-around;
+   }
+}
+
+@media (max-width:678px) {
+   .products_ {
+      grid-template-columns: repeat(2, 300px);
+      justify-content: space-around;
+   }
+}
+
+@media (max-width: 420px) {
+   .products_list {
+      grid-template-columns: 1fr;
+   }
+   .title {
+      font-size: small;
+   }
+}
