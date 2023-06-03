@@ -1,8 +1,8 @@
-.catalog_wrapper {
+.wrapper {
    margin: 40px 30px 90px;
 }
 
-.catalog_header {
+.header {
    display: flex;
    align-items: center;
    margin-bottom: 40px;
@@ -11,13 +11,13 @@
    gap: 100px;
 }
 
-.catalog_title {
+.title {
    font-size: 30px;
    font-weight: 600;
    color: green;
 }
 
-.catalog_container {
+.container {
    margin: 20px auto;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -25,27 +25,27 @@
    gap: 32px;
 }
 
-.catalog_container a {
+.container a {
    text-decoration: none;
    color: brown;
    transition: all 0.3s ease;
 }
-.catalog_container a:hover {
+.container a:hover {
    color: green;
 }
 
 @media (max-width: 768px) {
 
-   .catalog_wrapper {
+   .wrapper {
       padding: 15px 20px;
    }
 
-   .catalog_header {
+   .header {
       width: 98%;
       justify-content: space-between;
    }
 
-   .catalog_container {
+   .container {
       margin: 20px auto;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;

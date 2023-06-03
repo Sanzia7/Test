@@ -22,7 +22,7 @@ export default function CategoriesPage() {
       <div>
          <CategoriesCatalog
             categories={categories}
-            btn_show={false}
+            btnShow={false}
             title='Categories'
          />
       </div>

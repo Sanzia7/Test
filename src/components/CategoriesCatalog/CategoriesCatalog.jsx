@@ -8,16 +8,16 @@ import ButtonLight from '../UI/ButtonLight/ButtonLight'
 export default function CategoriesCatalog({categories, btnShow, title}) {
 
   return (
-    <div className={s.catalog_wrapper} id='categories'>
-      <div className={s.catalog_header}>
-        <h2 className={s.catalog_title}>{title}</h2>
+    <div className={s.wrapper} id='categories'>
+      <div className={s.header}>
+        <h2 className={s.title}>{title}</h2>
         {btnShow && (
           <NavLink to='/catalog'>
             <ButtonLight text='All Categories'/>
           </NavLink>
         )}
       </div>
-      <div className={s.catalog_container}>
+      <div className={s.container}>
         {categories.map((item) => (
           <NavLink
             key={item.id}
