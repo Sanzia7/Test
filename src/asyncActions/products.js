@@ -4,7 +4,7 @@ import { loadProductsAction } from "../store/reducers/productsReducer"
 
 
 const productsURL = URL + '/products/all'
- const categoryURL = URL + '/categories/'
+const categoryURL = URL + '/categories/'
 
 export const fetchProducts =() => {
    return function (dispatch) {

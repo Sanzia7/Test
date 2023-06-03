@@ -3,7 +3,7 @@ import s from './SaleProducts'
 import { useSelector } from 'react-redux';
 import AllProducts from '../AllProducts/AllProducts'
 
- export default function SaleProducts() {
+export default function SaleProducts() {
    const products = useSelector(store => store.products)
    const productsShow = []
 

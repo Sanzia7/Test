@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import HomeBanner from '../../components/HomeBanner/HomeBunner'
 import FirstOrdering from '../../components/FirstOrdering/FirstOrdering'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchCategories } from '../../asyncActions/categories'
 import CategoriesCatalog from '../../components/CategoriesCatalog/CategoriesCatalog'
+import { fetchProducts } from '../../asyncActions/products'
+import SaleProducts from '../../components/SaleProducts/SaleProducts'
 
 
 
@@ -11,9 +13,11 @@ export default function HomePage() {
    const dispatch = useDispatch()
 
    const categories = useSelector(store => store.categories)
+   const products = useSelector(store => store.products)
 
    useEffect(() => {
       dispatch(fetchCategories()) 
+      dispatch(fetchProducts())
       window.scrollTo(0, 0)
    }, [])
 
@@ -24,11 +28,11 @@ export default function HomePage() {
          <HomeBanner />
          <CategoriesCatalog
             categories={showCategories}
-            btn_show={true}
+            btnShow={true}
             title='Catalog'
          />
          <FirstOrdering />
-
+         <SaleProducts />
       </div>
    )
 }
