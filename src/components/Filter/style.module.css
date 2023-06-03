@@ -22,7 +22,12 @@ select {
 
 label {
    margin-right: 7px;
-   font-size: 15px;
+   font-size: 5px;
+   font-weight: 600;
+}
+
+.price input {
+   width: 100px;
 }
 
 .price,
@@ -30,15 +35,27 @@ label {
 .sort {
    display: flex;
    align-items: center;
+}
+
+.price {
    gap: 15px;
 }
 
-.price input {
-   width: 110px;
+.price input,
+.sort input {
+   padding-left: 10px;
 }
 
 .sale {
-   margin-right: 84px;
+   margin-right: 82px;
+}
+
+@media (max-width: 470px) {
+   select {
+      margin-left: 22px;
+      width: 184px;
+      background-position: 168px center;
+   }
 }
 
 .sale_title {
@@ -93,7 +110,7 @@ label {
    top: 3px;
    width: 11px;
    height: 20px;
-   border: solid white;
+   border: solid honeydew;
    border-width: 0 3px 3px 0;
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
@@ -113,12 +130,4 @@ input::-webkit-inner-spin-button {
    background-repeat: no-repeat;
    background-position: 205px center;
    background-size: 10px;
-}
-
-@media (max-width: 460px) {
-   select {
-      margin-left: 22px;
-      width: 178px;
-      background-position: 162px center;
-   }
 }
