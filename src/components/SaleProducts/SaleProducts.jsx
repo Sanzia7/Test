@@ -3,16 +3,20 @@ import { useSelector } from 'react-redux';
 
 function SaleProducts() {
    const products = useSelector(store => store.products)
-   const showProducts = []
+   const productsShow = []
 
    if (products.length !== 0) {
       const saleProducts = products.filter(product => product.discont_price !== null)
-
-      for 
+      for (let i = 0; i < 3; i++) {
+         let indexRandom = Math.round(Math.random() * saleProducts.length)
+         productsShow.push(saleProducts[indexRandom])
+         saleProducts.splice(indexRandom)
+      }
    }
-   return (
+
+   return (      
       <div>
-         
+         <AllProducts />
       </div>
    );
 }

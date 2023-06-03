@@ -5,13 +5,13 @@ import CategoryItem from '../CategoryItem/CategoryItem'
 import ButtonLight from '../UI/ButtonLight/ButtonLight'
 
 
-export default function CategoriesCatalog({categories, btn_show, title}) {
+export default function CategoriesCatalog({categories, btnShow, title}) {
 
   return (
     <div className={s.catalog_wrapper} id='categories'>
       <div className={s.catalog_header}>
         <h2 className={s.catalog_title}>{title}</h2>
-        {btn_show && (
+        {btnShow && (
           <NavLink to='/catalog'>
             <ButtonLight text='All Categories'/>
           </NavLink>
@@ -27,7 +27,6 @@ export default function CategoriesCatalog({categories, btn_show, title}) {
           </NavLink>
         ))}
       </div>
-
     </div>
   )
 }
