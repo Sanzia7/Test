@@ -1,0 +1,124 @@
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 55px;
+}
+
+input,
+select {
+   height: 44px;
+   outline: auto;
+   border: 1px solid brown;
+   border-radius: 5px;
+}
+
+select {
+   width: 230px;
+   margin-left: 55px;
+   padding-left: 12px;
+   color: darkslategray;
+}
+
+label {
+   margin-right: 7px;
+   font-size: 15px;
+}
+
+.price,
+.sale,
+.sort {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.price input {
+   width: 110px;
+}
+
+.sale {
+   margin-right: 84px;
+}
+
+.sale_title {
+   position: relative;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor: pointer;
+   font-size: 22px;
+}
+
+.sale_title input {
+   position: absolute;
+   height: 0;
+   width: 0;
+   opacity: 0;
+   cursor: pointer;
+}
+
+.checkmark {
+   position: absolute;
+   top: -7px;
+   right: -70px;
+   height: 40px;
+   width: 40px;
+   border-radius: 5px;
+   border: 1px solid brown;
+}
+
+.sale_title:hover input~.checkmark {
+   background-color: honeydew;
+}
+
+.sale_title input:checked~.checkmark {
+   background-color: lime;
+}
+
+.checkmark::after {
+   content: '';
+   position: absolute;
+   display: none;
+}
+
+.sale_title input:checked~.checkmark::after {
+   display: block;
+   ;
+}
+
+.sale_title .checkmark::after {
+   left: 14px;
+   top: 3px;
+   width: 11px;
+   height: 20px;
+   border: solid white;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+.sort select {
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   background-image: url('./arrow-down.png');
+   background-repeat: no-repeat;
+   background-position: 205px center;
+   background-size: 10px;
+}
+
+@media (max-width: 460px) {
+   select {
+      margin-left: 22px;
+      width: 178px;
+      background-position: 162px center;
+   }
+}

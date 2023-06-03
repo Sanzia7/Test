@@ -1,12 +1,12 @@
 const defaultState = {}
 
 const LOAD_CATEGORY = "LOAD_CATEGORY"
-const SALE_FILTER = "SALE_FILTER"
-const DEFAULT_SORT = "DEFAULT_SORT"
-const PRICE_DOWN_SORT = "PRICE_DOWN_SORT"
-const PRICE_UP_SORT = "PRICE_UP_SORT"
-const NAME_SORT = "NAME_SORT"
-const RANGE_FILTER = "RANGE_FILTER"
+const FILTER_SALE = "FILTER_SALE"
+const SORT_DEFAULT = "SORT_DEFAULT"
+const SORT_PRICE_DOWN = "SORT_PRICE_DOWN"
+const SORT_PRICE_UP = "SORT_PRICE_UP"
+const SORT_NAME = "SORT_NAME"
+const FILTER_RANGE = "FILTER_RANGE"
 
 export const categoryReducer = (state = defaultState, action) => {
    switch (action.type) {
@@ -20,7 +20,7 @@ export const categoryReducer = (state = defaultState, action) => {
          ]
          return { ...action, payload }
 
-      case SALE_FILTER:
+      case FILTER_SALE:
          return {
             ...state,
             data: state.data.map((item) => {
@@ -31,10 +31,10 @@ export const categoryReducer = (state = defaultState, action) => {
             })
          }
 
-      case DEFAULT_SORT:
+      case SORT_DEFAULT:
          return { ...state, data: state.data.sort((a, b) => a.id - b.id) }
 
-      case PRICE_DOWN_SORT:
+      case SORT_PRICE_DOWN:
          return {
             ...state,
             data: state.data.sort(
@@ -44,7 +44,7 @@ export const categoryReducer = (state = defaultState, action) => {
             )
          }
 
-      case PRICE_UP_SORT:
+      case SORT_PRICE_UP:
          return {
             ...state,
             data: state.data.sort(
@@ -52,7 +52,7 @@ export const categoryReducer = (state = defaultState, action) => {
             )
          }
 
-      case NAME_SORT:
+      case SORT_NAME:
          return {
             ...state,
             data: state.data.sort(
@@ -60,7 +60,7 @@ export const categoryReducer = (state = defaultState, action) => {
             )
          }
 
-      case RANGE_FILTER:
+      case FILTER_RANGE:
          let { from, to } = action.payload;
          if (isNaN(from)) {
             to = -Infinity
@@ -84,9 +84,9 @@ export const categoryReducer = (state = defaultState, action) => {
 };
 
 export const loadCategoryAction = (payload) => ({ type: LOAD_CATEGORY, payload })
-export const saleFilterAction = (payload) => ({ type: SALE_FILTER, payload })
-export const defaultSortAction = () => ({ type: DEFAULT_SORT })
-export const priceDownSortAction = () => ({ type: PRICE_DOWN_SORT })
-export const priceUpSortAction = () => ({ type: PRICE_UP_SORT })
-export const nameSortAction = () => ({ type: NAME_SORT })
-export const rangeFilterAction = (payload) => ({ type: RANGE_FILTER, payload })
+export const filterSaleAction = (payload) => ({ type: FILTER_SALE, payload })
+export const sortDefaultAction = () => ({ type: SORT_DEFAULT })
+export const sortPriceDownAction = () => ({ type: SORT_PRICE_DOWN })
+export const sortPriceUpAction = () => ({ type: SORT_PRICE_UP })
+export const sortNameAction = () => ({ type: SORT_NAME })
+export const filterRangeAction = (payload) => ({ type:FILTER_RANGE, payload })
