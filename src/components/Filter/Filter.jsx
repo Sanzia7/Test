@@ -9,7 +9,7 @@ import {
    sortPriceDownProductsAction,
    sortPriceUpProductsAction,
 } from "../../store/reducers/productsReducer";
-import { filterRangeAction, sortDefaultAction, sortNameAction, sortPriceDownAction, sortPriceUpAction } from "../../store/reducers/categoryReducer";
+import { filterRangeAction, filterSaleAction, sortDefaultAction, sortNameAction, sortPriceDownAction, sortPriceUpAction } from "../../store/reducers/categoryReducer";
 
 export default function Filter({ sortSaleShow, location }) {
    const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export default function Filter({ sortSaleShow, location }) {
    const saleHandler = (e) => {
       dispatch(
          location === "category"
-            ? sortSaleShow(e.target.checked)
+            ? filterSaleAction(e.target.checked)
             : filterSaleProductsAction(e.target.checked)
       );
    };
@@ -80,20 +80,20 @@ export default function Filter({ sortSaleShow, location }) {
          <div className={s.price}>
             <label className={s.price_title}>Price</label>
             <input
-               type="number"
-               name="from"
-               step='.1'
-               placeholder="from"
-               min='0'
+               type={"number"}
+               name={"from"}
+               step={'.1'}
+               placeholder={"from"}
+               min={'0'}
                onChange={changeHandler}
                value={fromValue}
             />
             <input
-               type="number"
-               name="to"
-               placeholder="to"
-               step='.1'
-               min='0'
+               type={"number"}
+               name={"to"}
+               placeholder={"to"}
+               step={'.1'}
+               min={'0'}
                onChange={changeHandler}
                value={toValue}
             />
@@ -103,8 +103,8 @@ export default function Filter({ sortSaleShow, location }) {
                <label className={s.sale_title}>
                   Sales
                   <input
-                     type="checkbox"
-                     name="check_sale"
+                     type={"checkbox"}
+                     name={"check_sale"}
                      onClick={saleHandler}
                   />
                   <span className={s.checkmark}></span>
@@ -113,7 +113,7 @@ export default function Filter({ sortSaleShow, location }) {
          )}
          <div className={s.sort}>
             <label className={s.sort_title}>Sorted</label>
-            <select name="sort" onInput={sortOptionHandler}>
+            <select name="sort_by" onInput={sortOptionHandler}>
                <option value="default">default</option>
                <option value="priceDown">price-down</option>
                <option value="priceUp">price-up</option>
