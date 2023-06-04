@@ -1,10 +1,11 @@
 import { loadCategoriesAction } from '../store/reducers/categoriesReducer'
 import URL from './url'
-const categoriesURL = URL + 'categories/all'
+// const categoriesURL = URL + '/categories/all'
 
 export const fetchCategories = () => {
    return function (dispatch) {
-      fetch(categoriesURL)
+      // fetch(`${URL}/categories/all`)
+      fetch('http://localhost:3333/categories/all')
          .then(res => res.json())
          .then(data = dispatch(loadCategoriesAction(data)))
    }
@@ -12,22 +13,4 @@ export const fetchCategories = () => {
 
 
 
-
-//-----------------------------------------
-// import axios from 'axios'
-// import URL from './url'
-
-// const getCategories = () => {
-//    return axios.get(`${URL}/categories/all`)
-// }
-
-// const getCategoryItem = (id) => {
-//    return axios.get(`${URL}/categories/${id}`)
-// }
-
-// export default { getCategories, getCategoryItem }
-
-
-
-// import { categoriesLoadAction } from "../reducer/categoriesReducer"
 

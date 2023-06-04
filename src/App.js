@@ -9,6 +9,7 @@ import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import CategoryItemPage from "./pages/CategoryItemPage/CategoryItemPage";
 import ProductItemPage from "./pages/ProductItemPage/ProductItemPage";
 import SalesPage from "./pages/SalesPage/SalesPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 
 function App() {

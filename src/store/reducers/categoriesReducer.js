@@ -1,4 +1,4 @@
-const defaultState = []
+const defaultState = [{}]
 
 const LOAD_CATEGORIES = 'LOAD_CATEGORIES'
 

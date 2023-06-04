@@ -2,7 +2,7 @@ import React from 'react'
 import s from './style.module.css'
 import { useDispatch } from 'react-redux'
 import URL from '../../asyncActions/url'
-import { HiXMark } from 'react-icons/hi'
+import { RxCross1 } from 'react-icons/rx'
 import {
    decrementCountAction,
    incrementCountAction,
@@ -29,7 +29,7 @@ export default function Cart({ id, title, image, count, discont_price, price }) 
          </div>
          <h2 className={s.sale_price}>{discont_price ? discont_price : price}$</h2>
          {discont_price && <h3 className={s.price}>{price}</h3>}
-         <HiXMark
+         <RxCross1
             className={s.close_btn}
             onClick={() => dispatch(removeFromCartAction(id))}
          />
