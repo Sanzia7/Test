@@ -8,7 +8,7 @@ export default function SaleProducts() {
    const productsShow = []
 
    if (products.length !== 0) {
-      const saleProducts = products.filter(product => product.discont_price !== null)
+      const saleProducts = products.filter(item => item.discont_price !== null)
       for (let i = 0; i < 3; i++) {
          let indexRandom = Math.round(Math.random() * saleProducts.length)
          productsShow.push(saleProducts[indexRandom])

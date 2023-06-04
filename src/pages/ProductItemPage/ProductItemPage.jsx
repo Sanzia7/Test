@@ -13,19 +13,19 @@ export default function ProductItemPage() {
 
    useEffect(() => {
       window.scrollTo(0, 0);
-      const productsURL = URL + "/products/";
-      fetch(`${productsURL}${id}`)
+      const productURL = URL + "/products/";
+      fetch(`${productURL}${id}`)
          .then((resp) => resp.json())
          .then((data) => setProduct(data));
    }, [id]);
 
 
    const productItem = product ? Object.assign({}, ...product) : {};
-   
+   // const productItem = product ? product : {};
+
    const { title, image, discont_price, price, description } = productItem;
 
    const saleValue = Math.round(100 - (discont_price * 100) / price);
-
 
    return (
       <div className={s.container}>

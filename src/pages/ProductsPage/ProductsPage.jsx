@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProducts } from '../../asyncActions/products'
 import AllProducts from '../../components/AllProducts/AllProducts'
-//import s from './style.module.css'
 
 export default function ProductsPage() {
 

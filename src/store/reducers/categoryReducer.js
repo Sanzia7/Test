@@ -18,7 +18,7 @@ export const categoryReducer = (state = defaultState, action) => {
                rangeShow: true,
             }))
          ]
-         return { ...action, payload }
+         return { ...action.payload }
 
       case FILTER_SALE:
          return {

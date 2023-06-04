@@ -24,7 +24,7 @@ export const productsReducer = (state = defaultState, action) => {
       case FILTER_SALE_PRODUCTS:
          if (action.payload) {
             return state.map(item => {
-               if (item.discont_price === nul) {
+               if (item.discont_price === null) {
                   item.saleShow = false
                }
                return item
@@ -62,8 +62,8 @@ export const productsReducer = (state = defaultState, action) => {
          return [...state].map(item => ({
             ...item,
             rangeShow:
-               (product.discont_price ? product.discont_price : product.price) >= from
-               && (product.discont_price ? product.discont_price : product.price) <= to
+               (item.discont_price ? item.discont_price : item.price) >= from
+               && (item.discont_price ? item.discont_price : item.price) <= to
          }))
 
       default:
