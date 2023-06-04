@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './style.module.css';
 import Filter from '../Filter/Filter';
+import ProductItemPage from '../../pages/ProductItemPage/ProductItemPage';
 
 export default function AllProducts({
    products,
@@ -19,7 +20,7 @@ export default function AllProducts({
             {products.length === 0
                ? <p>Such products do not exist</p>
                : products.map(item => (
-                  <ProductItem
+                  <ProductItemPage
                      key={item.id}
                      product={item}
                   />

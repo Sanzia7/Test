@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import s from "./style.module.css";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import URL from "../../asyncActions/url";
 import ButtonGreen from '../../components/UI/ButtonGreen/ButtonGreen'
 import { addToCartAction } from "../../store/reducers/cartReducer";
@@ -20,10 +20,11 @@ export default function ProductItemPage() {
    }, [id]);
 
    const productItem = product ? Object.assign({}, ...product) : {};
+   
    const { title, image, discont_price, price, description } = productItem;
+
    const saleValue = Math.round(100 - (discont_price * 100) / price);
 
-   const cart = useSelector((store) => store.cart);
 
    return (
       <div className={s.container}>
@@ -35,8 +36,14 @@ export default function ProductItemPage() {
                   <p className={s.sale_price}>
                      {discont_price !== null ? discont_price : price} $
                   </p>
-                  {discont_price && <p className={s.price}>{price} $</p>}
-                  {discont_price && <p className={s.sale_value}>{-saleValue} %</p>}
+                  {discont_price &&
+                     <p className={s.price}>
+                        {price} $
+                     </p>}
+                  {discont_price &&
+                     <p className={s.sale_value}>
+                        {-saleValue} %
+                     </p>}
                </div>
                {/* <button onClick={() => dispatch(addToCartAction(product[0]))}>
                   to Cart

@@ -1,4 +1,21 @@
-.cart_block {
+.counter {
+   background-color: brown;
+   height: 20px;
+   width: 20px;
+   color: whitesmoke;
+   border-radius: 50%;
+   position: absolute;
+   bottom: 0;
+   right: -12px;
+}
+
+.counter p {
+   font-size: 10px;
+   line-height: 20px;
+   text-align: center;
+}
+
+/*
    position: relative;
    width: 60px;
    height: 60px;
@@ -24,7 +41,7 @@
 
 .empty_cart {
    display: none;
-}
+} */
 
 
 /* 

@@ -10,7 +10,7 @@ export const fetchProducts =() => {
    return function (dispatch) {
       fetch(productsURL)
          .then(res => res.json())
-         .then(data = dispatch(loadProductsAction(data)))
+         .then(data => dispatch(loadProductsAction(data)))
    }
 }
 

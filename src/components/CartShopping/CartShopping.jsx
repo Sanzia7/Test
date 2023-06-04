@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart'
 
 export default function CartShopping() {
 
-   const cart = useSelector(store = store.cart)
+   const cart = useSelector(store => store.cart)
 
    return (
       <div className={s.shopping_cart}>
