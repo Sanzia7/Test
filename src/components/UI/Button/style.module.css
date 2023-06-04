@@ -1,0 +1,80 @@
+.btn_header {
+   color: white;
+   background-color: rgb(2, 152, 2);
+   border: 1px solid green;
+   /* box-shadow: rgba(1, 41, 6, 0.24) 0px 3px 8px; */
+   box-shadow: 2px 3px 4px darkslategray;
+   padding: 8px 16px;
+   font-size: 18px;
+   font-weight: 500;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.4s ease;
+}
+
+.btn_header:hover {
+   color: orangered;
+   background-color: lime;
+}
+
+/* --------------------- */
+
+.btn_to_cart {
+   width: 340px;
+   height: 86px;
+   background-color: transparent;
+   border-radius: 10px;
+   color: darkgreen;
+   border: 1px solid darkgreen;
+   font-weight: 700;
+   font-size: 28px;
+   transition: all 0.9s ease;
+   cursor: pointer;
+}
+
+.btn_to_cart:hover {
+   background: transparent;
+   color: olivedrab;
+}
+
+.btn_order {
+   background-color: green;
+   height: 70px;
+   border-radius: 20px;
+   border: 2px solid green;
+   color: white;
+   font-weight: 700;
+   font-size: 30px;
+   transition: all 0.5s ease;
+   cursor: pointer;
+}
+
+.btn_order:hover {
+   background-color: greenyellow;
+   color: orangered;
+   border: 2px solid orangered;
+   box-shadow: 2px 3px 4px gray;
+}
+
+
+/* .btn {
+   outline: none;
+   padding: 10px 20px;
+   font-size: 18px;
+   border: 1px solid green;
+   border-radius: 8px;
+   background-color: green;
+   color: white;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.btn:hover {
+   background-color: greenyellow;
+   color: orangered;
+   font-size: 20px;
+   border: 1px solid green; 
+
+}
+
+*/

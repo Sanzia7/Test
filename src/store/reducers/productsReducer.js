@@ -9,9 +9,6 @@ const SORT_NAME_PRODUCTS = 'SORT_NAME_PRODUCTS'
 const FILTER_RANGE_PRODUCTS = 'FILTER_RANGE_PRODUCTS'
 
 
-
-
-
 export const productsReducer = (state = defaultState, action) => {
    switch (action.type) {
       case LOAD_PRODUCTS:

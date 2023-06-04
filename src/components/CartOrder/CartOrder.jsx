@@ -3,7 +3,7 @@ import s from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCartAction } from '../../store/reducers/cartReducer';
 import { fetchOrderSend } from '../../asyncActions/order';
-import ButtoGreen from '../UI/ButtonGreen/ButtonGreen'
+import Button from '../UI/Button/Button';
 
 
 export default function CartOrder() {
@@ -35,7 +35,10 @@ export default function CartOrder() {
                placeholder='Phone number'
                required
             />
-            <ButtoGreen text="Order" />
+            <Button
+               text={'ORDER'}
+               properties={'btn_order'}
+            />
          </form>
 
       </div>

@@ -2,11 +2,10 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import s from "./style.module.css";
 import Logo from "../../media/logo.png";
-import logoW from "../../media/logo_white.png";
 import { NavLink } from "react-router-dom";
-import ButtonGreen from "../UI/ButtonGreen/ButtonGreen";
 import CartCounter from "../CartCounter/CartCounter";
 import { SlHandbag } from "react-icons/sl";
+import Button from "../UI/Button/Button";
 
 export default function Header() {
    const refHd = useRef(null);
@@ -34,10 +33,11 @@ export default function Header() {
       <header className={s.header} ref={refHd}>
          <div className={s.logo_wrapper}>
             <NavLink to="/">
-               <img src={isActive ? logoW : Logo} alt="logo" />
+               <img src={Logo} alt="logo" />
             </NavLink>
             <NavLink to="/catalog">
-               <ButtonGreen text={"Catalog"} />
+               <Button text={"Catalog"}
+               properties={'btn_header'}/>
             </NavLink>
          </div>
          <div className={s.nav_menu}>

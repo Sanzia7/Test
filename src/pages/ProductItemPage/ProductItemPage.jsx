@@ -3,7 +3,7 @@ import s from "./style.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import URL from "../../asyncActions/url";
-import ButtonGreen from '../../components/UI/ButtonGreen/ButtonGreen'
+import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from "../../store/reducers/cartReducer";
 
 export default function ProductItemPage() {
@@ -50,10 +50,7 @@ export default function ProductItemPage() {
                         {-saleValue} %
                      </p>}
                </div>
-               {/* <button onClick={() => dispatch(addToCartAction(product[0]))}>
-                  to Cart
-               </button> */}
-               <ButtonGreen text={'Add to Cart'}
+               <Button text={'Add to Cart'} properties={'btn_to_cart'}
                   onClick={() => dispatch(addToCartAction(product[0]))}
                />
                <h4>Description:</h4>

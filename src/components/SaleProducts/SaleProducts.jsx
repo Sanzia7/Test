@@ -21,8 +21,8 @@ export default function SaleProducts() {
          <AllProducts
             products={productsShow}
             title='Sale'
-            location='sale'
             filterShow={false}
+            location='sale'
          />
       </div>
    );

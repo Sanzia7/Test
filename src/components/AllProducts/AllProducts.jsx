@@ -11,12 +11,14 @@ export default function AllProducts({
    saleShow,
    location,
 }) {
-   products = products?.filter(item => item.saleShow && item.rangeShow);
+   products = products?.filter(item => item?.saleShow  && item.rangeShow);
 
    return (
       <div className={s.wrapper}>
          <h2 className={s.title}>{title}</h2>
-         {filterShow && <Filter saleShow={saleShow} location={location} />}
+         {filterShow &&
+            <Filter saleShow={saleShow}
+               location={location} />}
          <div className={s.products}>
             {products.length === 0
                ? <p>Such products do not exist</p>
