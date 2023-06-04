@@ -13,13 +13,16 @@ export default function AllProducts({
 
    return (
       <div className={s.wrapper}>
-         <h1 className={s.title}>{title}</h1>
+         <h2 className={s.title}>{title}</h2>
          {filterShow && <Filter saleShow={saleShow} location={location} />}
          <div className={s.products}>
             {products.length === 0
                ? <p>Such products do not exist</p>
                : products.map(item => (
-                  <ProductItem key={item.id} products={item} />
+                  <ProductItem
+                     key={item.id}
+                     product={item}
+                  />
                ))}
          </div>
       </div>

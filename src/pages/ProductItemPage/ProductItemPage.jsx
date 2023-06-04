@@ -3,6 +3,7 @@ import s from "./style.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import URL from "../../asyncActions/url";
+import ButtonGreen from '../../components/UI/ButtonGreen/ButtonGreen'
 import { addToCartAction } from "../../store/reducers/cartReducer";
 
 export default function ProductItemPage() {
@@ -16,7 +17,7 @@ export default function ProductItemPage() {
       fetch(`${productURL}${id}`)
          .then((resp) => resp.json())
          .then((data) => setProduct(data));
-   }, []);
+   }, [id]);
 
    const productItem = product ? Object.assign({}, ...product) : {};
    const { title, image, discont_price, price, description } = productItem;
@@ -37,10 +38,13 @@ export default function ProductItemPage() {
                   {discont_price && <p className={s.price}>{price} $</p>}
                   {discont_price && <p className={s.sale_value}>{-saleValue} %</p>}
                </div>
-               <button onClick={() => dispatch(addToCartAction(product[0]))}>
+               {/* <button onClick={() => dispatch(addToCartAction(product[0]))}>
                   to Cart
-               </button>
-               <h4>Descroption:</h4>
+               </button> */}
+               <ButtonGreen text={'Add to Cart'}
+                  onClick={() => dispatch(addToCartAction(product[0]))}
+               />
+               <h4>Description:</h4>
                <p>{description}</p>
             </div>
          </div>
