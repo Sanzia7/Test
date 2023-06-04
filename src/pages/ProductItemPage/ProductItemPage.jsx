@@ -13,11 +13,12 @@ export default function ProductItemPage() {
 
    useEffect(() => {
       window.scrollTo(0, 0);
-      const productURL = URL + "/products/";
-      fetch(`${productURL}${id}`)
+      const productsURL = URL + "/products/";
+      fetch(`${productsURL}${id}`)
          .then((resp) => resp.json())
          .then((data) => setProduct(data));
    }, [id]);
+
 
    const productItem = product ? Object.assign({}, ...product) : {};
    
@@ -30,11 +31,15 @@ export default function ProductItemPage() {
       <div className={s.container}>
          <h2>{title}</h2>
          <div className={s.info}>
+            <div className={s.img_wrapper}>
                <img src={`${URL}${image}`} alt={title} />
+            </div>
             <div className={s.description}>
                <div className={s.price_box}>
                   <p className={s.sale_price}>
-                     {discont_price !== null ? discont_price : price} $
+                     {discont_price !== null
+                        ? discont_price
+                        : price} $
                   </p>
                   {discont_price &&
                      <p className={s.price}>

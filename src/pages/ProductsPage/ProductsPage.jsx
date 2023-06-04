@@ -20,10 +20,10 @@ export default function ProductsPage() {
       <div>
          <AllProducts
             products={products}
-            title={'All Products'}
+            title='All Products'
             filterShow={true}
             saleShow={true}
-            location={'all_products'}
+            location='all_products'
          />
       </div>
    )
