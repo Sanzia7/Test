@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Button from '../UI/Button/Button';
 import { addToCartAction } from '../../store/reducers/cartReducer';
+import { ProductPrice } from '../ProductPrice/ProductPrice';
 
 
 export default function ProductItem({ product }) {
@@ -16,28 +17,21 @@ export default function ProductItem({ product }) {
    };
 
    return (
-      <div className={s.product_wrapper}>
+      <div className={s.product_item}>
          <NavLink to={`/products/${id}`}>
             <div className={s.img_wrapper}>
                <img src={`${URL}${image}`} alt={title} />
                <Button
                   text='Add to Cart'
-                  content='btn_to_cart'
+                  content='btn_product'
                   onClick={addToCart}
                />
             </div>
-            <div className={s.price_wrapper}>
-               <p className={s.sale_price}>
-                  {discont_price !== null ? discont_price : price} $
-               </p>
-               {discont_price &&
-                  <p className={s.price}>
-                     {price} $
-                  </p>}
-               {discont_price &&
-                  <p className={s.sale_value}>
-                     {-saleValue} %
-                  </p>}
+            <div className={s.poduct_content}>
+               <ProductPrice
+                  price={price}
+                  onClick={addToCart}
+               />
                <h3>{title}</h3>
             </div>
          </NavLink>
