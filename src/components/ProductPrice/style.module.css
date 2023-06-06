@@ -1,0 +1,26 @@
+.price_box {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   margin-bottom: 30px;
+   gap: 7px;
+}
+
+.sale_price {
+   font-weight: 600;
+   font-size: 30px;
+   color: teal;
+}
+
+.old_price {
+   color: #8b8b8b;
+   text-decoration: line-through;
+   font-size: 28px;
+   font-weight: 500;
+}
+
+.sale {
+   font-size: 28px;
+   color: orangered;
+   font-weight: 600;
+}

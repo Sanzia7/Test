@@ -6,13 +6,14 @@ import URL from "../../asyncActions/url";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 import Button from "../../components/UI/Button/Button";
 import { fetchProductInfo } from "../../asyncActions/products";
+import { ProductPrice } from "../../components/ProductPrice/ProductPrice";
 
 export default function ProductItemPage() {
    const { id } = useParams();
    const dispatch = useDispatch();
    const navigate = useNavigate();
 
-   const productItem = useSelector((store) => store.product);
+   const product = useSelector((store) => store.product);
 
    useEffect(() => {
       window.scrollTo(0, 0);
@@ -34,10 +35,10 @@ export default function ProductItemPage() {
 
    const addToCart = (e) => {
       e.preventDefault()
-      dispatch(addToCartAction(productItem))
+      dispatch(addToCartAction(product))
    }
 
-   const sale = discont_price && Math.round(((price - discont_price) * 100) / price)
+   // const sale = discont_price && Math.round(((price - discont_price) * 100) / price)
 
    return (
       <div className={s.product_item}>
@@ -47,20 +48,15 @@ export default function ProductItemPage() {
                <div className={s.img_wrapper}>
                   <img src={`${URL}${image}`} alt={title} />
                </div>
-               <div className={s.info_content}>
+               <div className={s.info_contetnt}>
                   <div className={s.description}>
                      <h3>Description:</h3>
                      <p>{description}</p>
                   </div>
-                  <div className={s.price_box}>
-                     <p className={s.sale_price}>
-                        {sale ? discont_price : price} $
-                     </p>
-                     <>
-                        <p className={s.old_price}>{price} $</p>
-                        <p className={s.sale}>-{discont} %</p>
-                     </>
-                  </div>
+                  <ProductPrice
+                     price={price}
+                     discont_price={discont_price}
+                  />
                   <Button
                      text="add to cart"
                      content="btn_info"
@@ -75,7 +71,15 @@ export default function ProductItemPage() {
 }
 
 
-
+//  <div className={s.price_box}>
+//                      <p className={s.sale_price}>
+//                         {sale ? discont_price : price} $
+//                      </p>
+//                      <>
+//                         <p className={s.old_price}>{price} $</p>
+//                         <p className={s.sale}>-{discont} %</p>
+//                      </>
+//                   </div> 
 
    // useEffect(() => {
    //    window.scrollTo(0, 0);

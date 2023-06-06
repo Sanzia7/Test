@@ -1,17 +1,16 @@
 import React from 'react';
 import s from './style.module.css';
+import URL from '../../asyncActions/url';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Button from '../UI/Button/Button';
 import { addToCartAction } from '../../store/reducers/cartReducer';
-import URL from '../../asyncActions/url';
+
 
 export default function ProductItem({ product }) {
    const { id, image, price, title, discont_price } = product;
    const dispatch = useDispatch();
-   const saleValue = Math.round(100 - discont_price * 100 / price);
-
-   const addToCartHandler = e => {
+   const addToCart = (e) => {
       e.preventDefault();
       dispatch(addToCartAction(product));
    };
@@ -22,9 +21,9 @@ export default function ProductItem({ product }) {
             <div className={s.img_wrapper}>
                <img src={`${URL}${image}`} alt={title} />
                <Button
-                  text={'add to Cart'}
-                  content={'btn_product'}
-                  onClick={addToCartHandler}
+                  text='Add to Cart'
+                  content='btn_to_cart'
+                  onClick={addToCart}
                />
             </div>
             <div className={s.price_wrapper}>

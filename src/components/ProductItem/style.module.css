@@ -1,13 +1,13 @@
 .product_wrapper {
    width: 100%;
-   min-height: 460px;
+   min-height: 380px;
    text-align: center;
    cursor: pointer;
 }
 
 .img_wrapper {
    position: relative;
-   z-index: 8;
+   z-index: 10;
    width: 280px;
    height: 270px;
    display: flex;

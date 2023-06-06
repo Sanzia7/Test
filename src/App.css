@@ -6,21 +6,31 @@
    box-sizing: border-box;
 }
 
-body,
 html {
-   max-width: 1440px;
-   height: 100vh;
-   margin: 0 auto;
-   padding: 20px;
-   
-   font-family: Montserrat sans-serif;
-   font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 500;
+   font-size: 18px;
    line-height: 20px;
 
-   background-color: beige;
+   background-color: burlywood;
    color: saddlebrown;
 }
 
+body {
+   background-color: burlywood;
+}
+
+#root {
+   max-width: 1440px;
+   min-height: 100vh;
+   margin: 0 auto;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: bisque;
+   color: saddlebrown;
+}
 
 ::-webkit-scrollbar {
    width: 0;
