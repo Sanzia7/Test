@@ -95,7 +95,6 @@ export const productsReducer = (state = defaultState, action) => {
             })
          }   
       
-      
       case SORT_NAME_PRODUCTS:
          return {
             ...state,

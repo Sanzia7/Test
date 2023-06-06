@@ -9,15 +9,15 @@ const productsURL = URL + '/products/all'
 export const fetchCategory = (id) => {
    return function (dispatch) {
       fetch(`${categoryURL}${id}`)
-         .then(res => res.json())
-         .then(data => dispatch(loadProductsAction(data)))
+         .then((res) => res.json())
+         .then((data) => dispatch(loadProductsAction(data)))
    }
 }
 
 export const fetchProducts =() => {
    return function (dispatch) {
       fetch(productsURL)
-         .then(res => res.json())
+         .then((res) => res.json())
          .then((data) => {
             dispatch(loadProductsAction({ data, category: {} }))
             if (type === 'sale') {
