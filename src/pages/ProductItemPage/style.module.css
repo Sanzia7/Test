@@ -1,41 +1,55 @@
-.container {
+.product_container {
    margin: 30px 40px;
 }
 
-.container h2 {
-   color: gray;
+.product_container h2 {
+   color: darkorange;
    font-size: 36px;
-   font-weight: 600;
-   margin-bottom: 30px;
+   font-weight: 500;
+   margin-bottom: 40px;
 }
 
 .info {
    display: flex;
-   gap: 120px;
    align-items: center;
+   gap: 100px;
+
 }
 
-.img_wrapper img {
-   width: 100%;
-   object-fit: con;
+.info img {
+   width: 70%;
+   object-fit: contain;
 }
 
 .description {
    display: flex;
    flex-direction: column;
    gap: 40px;
-   max-width: 400px;
+   max-width: 300px;
+   margin-bottom: 30px;
+}
+
+.description h3 {
+   color: teal;
+   font-size: 30px;
+}
+
+.description p {
+   font-weight: 500;
+   font-size: 18px;
 }
 
 .price_box {
    display: flex;
    justify-content: space-between;
    align-items: baseline;
+   margin-bottom: 30px;
 }
 
 .sale_price {
    font-weight: 600;
    font-size: 30px;
+   color: teal;
 }
 
 .price {
@@ -47,11 +61,11 @@
 
 .sale_value {
    font-size: 28px;
-   color: pink;
+   color: orangered;
    font-weight: 600;
 }
 
-.description button {
+/* .description button {
    width: 340px;
    height: 86px;
    background-color: green;
@@ -67,16 +81,15 @@
 .description button:hover {
    background-color: white;
    color: green;
-}
+} */
 
-h4 {
+/* h3 {
    padding-top: 40px;
-   border-top: 1px dashed #8b8b8b;
    font-weight: 600;
    font-size: 24px;
+   border-bottom: dotted green;
 }
 
 p {
-   font-weight: 500;
-   font-size: 18px;
-}
+   
+} */

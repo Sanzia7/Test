@@ -16,7 +16,7 @@ export default function ProductsPage() {
 
 
    return (
-      <div className={s.products_list}>
+      <div className={s.products_container}>
          <AllProducts
             products={products}
             title={'All Products'}

@@ -6,17 +6,21 @@
    box-sizing: border-box;
 }
 
-body {
-   font-family: Montserrat sans-serif;
-   font-size: 14px;
-   line-height: 1.5;
-   height: 100vh;
-   background-color: beige;
+body,
+html {
    max-width: 1440px;
+   height: 100vh;
    margin: 0 auto;
    padding: 20px;
+   
+   font-family: Montserrat sans-serif;
+   font-size: 16px;
+   line-height: 20px;
+
+   background-color: beige;
    color: saddlebrown;
 }
+
 
 ::-webkit-scrollbar {
    width: 0;

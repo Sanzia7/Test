@@ -22,21 +22,43 @@
 .btn_to_cart {
    width: 340px;
    height: 86px;
-   background-color: transparent;
+   background-color: yellow;
    border-radius: 10px;
-   color: darkgreen;
+   color: orangered;
    border: 1px solid darkgreen;
    font-weight: 700;
    font-size: 28px;
-   transition: all 0.9s ease;
+   opacity: 1;
+   transition: all 0.5s ease;
    cursor: pointer;
+
 }
 
 .btn_to_cart:hover {
-   background: transparent;
-   color: olivedrab;
+   opacity: 0.5;
 }
 
+/* ------------------- */
+.btn_product {
+   width: 280px;
+   height: 70px;
+   background-color: lemonchiffon;
+   border: 2px solid green;
+   border-radius: 20px;
+   color: green;
+   font-weight: 600;
+   font-size: 20px;
+   opacity: 0;
+   transition: all 0.4s ease;
+}
+
+.btn_product:hover {
+   background-color: greenyellow;
+   color: orangered;
+   border: 2px solid orangered;
+}
+
+/* ------------------- */
 .btn_order {
    background-color: green;
    height: 70px;
@@ -56,6 +78,7 @@
    box-shadow: 2px 3px 4px gray;
 }
 
+/* ------------------- */
 
 /* .btn {
    outline: none;

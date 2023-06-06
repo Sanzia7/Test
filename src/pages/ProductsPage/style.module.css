@@ -1,3 +1,9 @@
-.products_list {
-   margin: 0 auto;
+.products_container {
+   margin-top: 80px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 318px);
+   justify-items: center;
+   justify-content: center;
+   grid-column-gap: 35px;
+   grid-row-gap: 55px;
 }

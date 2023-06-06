@@ -1,6 +1,10 @@
-const defaultState = []
+const defaultState = {
+   page: {},
+   list: [],
+}
 
 const LOAD_PRODUCTS = 'LOAD_PRODUCTS'
+const LOAD_PRODUCTS_SALE = 'LOAD_PRODUCTS_SALE '
 const FILTER_SALE_PRODUCTS = 'FILTER_SALE_PRODUCTS'
 const SORT_DEFAULT_PRODUCTS = 'SORT_DEFAULT_PRODUCTS'
 const SORT_PRICE_DOWN_PRODUCTS = 'SORT_PRICE_DOWN_PRODUCTS'
@@ -12,11 +16,33 @@ const FILTER_RANGE_PRODUCTS = 'FILTER_RANGE_PRODUCTS'
 export const productsReducer = (state = defaultState, action) => {
    switch (action.type) {
       case LOAD_PRODUCTS:
-         return action.payload.map(item => ({
-            ...item,
-            saleShow: true,
-            rangeShow: true
-         }))
+         if (action.payload.category.title) {
+            return {
+               page: action.payload.category.title,
+               list: action.payload.data.map((item) => ({
+                  ...item,
+                  saleShow: true,
+                  rangeShow: true,
+               })),
+            };
+         } else {
+            return {
+               page: { title: 'All Products' },
+               list: action.paload.data.map((item) => ({
+                  ...item,
+                  saleShow: true,
+                  rangeShow: true,
+               })),
+            };
+         }
+      
+      case LOAD_PRODUCTS_SALE:
+         return {
+            page: { title: 'Sale' },
+            list: state.list.filter(
+               item => item.discont_price
+            )
+         }
       
       case FILTER_SALE_PRODUCTS:
          if (action.payload) {
@@ -69,6 +95,7 @@ export const productsReducer = (state = defaultState, action) => {
 }
 
 export const loadProductsAction = (payload) => ({ type: LOAD_PRODUCTS, payload })
+export const loadProductsSaleAction = () => ({ type: LOAD_PRODUCTS_SALE })
 export const filterSaleProductsAction = (payload) => ({ type: FILTER_SALE_PRODUCTS, payload })
 export const sortDefaultProductsAction = () => ({ type: SORT_DEFAULT_PRODUCTS })
 export const sortPriceDownProductsAction = () => ({ type: SORT_PRICE_DOWN_PRODUCTS })

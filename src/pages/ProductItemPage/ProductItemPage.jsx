@@ -3,8 +3,8 @@ import s from "./style.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import URL from "../../asyncActions/url";
-import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from "../../store/reducers/cartReducer";
+import Button from "../../components/UI/Button/Button";
 
 export default function ProductItemPage() {
    const { id } = useParams();
@@ -28,13 +28,15 @@ export default function ProductItemPage() {
    const saleValue = Math.round(100 - (discont_price * 100) / price);
 
    return (
-      <div className={s.container}>
+      <div className={s.product_container}>
          <h2>{title}</h2>
          <div className={s.info}>
             <div className={s.img_wrapper}>
                <img src={`${URL}${image}`} alt={title} />
             </div>
             <div className={s.description}>
+               <h3>Description:</h3>
+               <p>{description}</p>
                <div className={s.price_box}>
                   <p className={s.sale_price}>
                      {discont_price !== null
@@ -50,11 +52,9 @@ export default function ProductItemPage() {
                         {-saleValue} %
                      </p>}
                </div>
-               <Button text={'Add to Cart'} properties={'btn_to_cart'}
-                  onClick={() => dispatch(addToCartAction(product[0]))}
-               />
-               <h4>Description:</h4>
-               <p>{description}</p>
+               <Button text={'add to cart'}
+                  properties={'btn_product'}
+                  onClick={() => dispatch(addToCartAction(product[0]))}/>
             </div>
          </div>
       </div>
