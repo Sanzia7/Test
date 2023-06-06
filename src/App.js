@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import CategoryItemPage from "./pages/CategoryItemPage/CategoryItemPage";
 import ProductItemPage from "./pages/ProductItemPage/ProductItemPage";
-import SalesPage from "./pages/SalesPage/SalesPage";
+
 import HomePage from "./pages/HomePage/HomePage";
 
 
@@ -21,8 +21,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CategoriesPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
-        <Route path="/sales/all" element={<SalesPage />} />
-        <Route path="/categories/:id" element={<CategoryItemPage />} />
+        <Route path="/sales/all" element={<ProductsPage />} />
+        <Route path="/categories/:id" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductItemPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/*" element={<NotFoundPage />} />        
