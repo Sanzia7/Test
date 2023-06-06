@@ -6,9 +6,7 @@ import CartPage from "./pages/CartPage/CartPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
-import CategoryItemPage from "./pages/CategoryItemPage/CategoryItemPage";
 import ProductItemPage from "./pages/ProductItemPage/ProductItemPage";
-
 import HomePage from "./pages/HomePage/HomePage";
 
 

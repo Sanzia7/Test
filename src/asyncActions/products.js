@@ -1,6 +1,6 @@
 import URL from "./url"
 import { loadProductsAction, loadProductsSaleAction } from "../store/reducers/productsReducer"
-import { loadProductAction } from "../store/productReducer"
+import { loadProductInfoAction } from "../store/productReducer"
 
 const categoryURL = URL + '/categories/'
 const productsURL = URL + '/products/all'
@@ -14,7 +14,7 @@ export const fetchCategory = (id) => {
    }
 }
 
-export const fetchProducts =() => {
+export const fetchProducts = (type) => {
    return function (dispatch) {
       fetch(productsURL)
          .then((res) => res.json())
@@ -27,11 +27,11 @@ export const fetchProducts =() => {
    }
 }
 
-export const fetchProduct = (product) => {
+export const fetchProductInfo = (product) => {
    return function (dispatch) {
       fetch(URL + product)
          .then((res) => res.json())
-         .then((data) => dispatch(loadProductAction(data)));
+         .then((data) => dispatch(loadProductInfoAction(data)));
    };
 };
 

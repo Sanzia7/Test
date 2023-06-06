@@ -1,8 +1,8 @@
-const LOAD_PRODUCT = 'LOAD_PRODUCT'
+const LOAD_PRODUCT_INFO = '[PRODUCT] LOAD_PRODUCT_INFO'
 
 export const productReducer = (state = {}, action) => {
    switch (action.type) {
-      case LOAD_PRODUCT:
+      case LOAD_PRODUCT_INFO:
          if (!action.payload || action.payload.status === 'ERR') {
             return { status: '*'}
          } else {
@@ -13,4 +13,4 @@ export const productReducer = (state = {}, action) => {
    }
 }
 
-export const loadProductAction = (payload) => ({type: LOAD_PRODUCT, payload})
+export const loadProductInfoAction = (payload) => ({type: LOAD_PRODUCT_INFO, payload})

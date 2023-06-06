@@ -1,28 +1,22 @@
-.container {
-   width: 100vw;
-   height: 450px;
-   margin: 0 auto;
-   background-image: url('./sorry.jpg');
-   background-repeat: no-repeat;
-   background-size: auto;
-   display: grid;
-   grid-template-columns: max-content;
-   gap: 30px;
-   padding: 50px;
+.container_err {
+   position: relative;
+   min-height: 625px;
 }
 
 .container h1 {
+   position: absolute;
    font-size: 30px;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
    font-weight: 800;
    color: gold;
-   padding: 0 25px;
+   padding: 100px 55px;
 }
 
 .container h2 {
+   position: absolute;
    font-size: 27px;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
    font-weight: 600;
    color: whitesmoke;
-   padding: 0 25px;
+   padding: 130px 55px;
 }
