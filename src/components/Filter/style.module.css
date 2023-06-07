@@ -1,73 +1,85 @@
-.container {
+.filter_container {
    display: flex;
-   flex-wrap: wrap;
-   align-items: center;
    gap: 50px;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-bottom: var(--margin-main);
 }
 
 input,
 select {
-   height: 44px;
-   outline: auto;
-   border: 1px solid brown;
-   border-radius: 5px;
+   height: 40px;
+   border-radius: 7px;
+   border: 1px solid var(--black-color);
+   outline: none;
 }
 
 select {
-   width: 230px;
-   margin-left: 55px;
-   padding-left: 12px;
-   color: darkslategray;
+   width: 220px;
+   padding-left: 10px;
+   color: #797979;
+   margin-left: 50px;
+   background-color: var(--white-color);
 }
 
 label {
-   margin-right: 7px;
-   font-size: 15px;
    font-weight: 600;
+   font-size: var(--info-text);
+   margin-right: 5px;
 }
 
-.price input {
+.filter_price input {
    width: 100px;
 }
 
-.price,
-.sale,
-.sort {
+.filter_price,
+.filter_discount,
+.filter_sort {
    display: flex;
    align-items: center;
 }
 
-.price {
-   gap: 15px;
-}
-
-.price input,
-.sort input {
+.filter_price input,
+.filter_sort input {
    padding-left: 10px;
 }
 
-.sale {
-   margin-right: 82px;
+.filter_price {
+   display: flex;
+   gap: 15px;
 }
 
+.filter_discount {
+   margin-right: 80px;
+}
 
+@media (max-width: 400px) {
+   select {
+      margin-left: 20px;
+      width: 180px;
+      background-position: 165px center;
+   }
+}
 
-.sale_title {
+/* -----------checkbox--------- */
+
+.filter_discount_title {
    position: relative;
+   cursor: pointer;
+   font-size: 22px;
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-   cursor: pointer;
-   font-size: 22px;
 }
 
-.sale_title input {
+.filter_discount_title input {
    position: absolute;
-   height: 0;
-   width: 0;
    opacity: 0;
    cursor: pointer;
+   height: 0;
+   width: 0;
+
 }
 
 .checkmark {
@@ -76,16 +88,16 @@ label {
    right: -70px;
    height: 40px;
    width: 40px;
-   border-radius: 5px;
-   border: 1px solid brown;
+   border-radius: 7px;
+   border: 1px solid black;
 }
 
-.sale_title:hover input~.checkmark {
-   background-color: honeydew;
+.filter_discount_title:hover input~.checkmark {
+   background-color: var(--white-color);
 }
 
-.sale_title input:checked~.checkmark {
-   background-color: lime;
+.filter_discount_title input:checked~.checkmark {
+   background-color: var(--primary-color);
 }
 
 .checkmark::after {
@@ -94,29 +106,31 @@ label {
    display: none;
 }
 
-.sale_title input:checked~.checkmark::after {
+.filter_discount_title input:checked~.checkmark::after {
    display: block;
-   ;
 }
 
-.sale_title .checkmark::after {
-   left: 14px;
+.filter_discount_title .checkmark::after {
+   left: 13px;
    top: 3px;
    width: 11px;
    height: 20px;
-   border: solid honeydew;
+   border: solid white;
    border-width: 0 3px 3px 0;
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    transform: rotate(45deg);
 }
 
+/* ----------input type number-------- */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
    -webkit-appearance: none;
 }
 
-.sort select {
+/* -------------- select ------------- */
+.filter_sort select {
    appearance: none;
    -moz-appearance: none;
    -webkit-appearance: none;
@@ -124,24 +138,4 @@ input::-webkit-inner-spin-button {
    background-repeat: no-repeat;
    background-position: 205px center;
    background-size: 10px;
-}
-
-@media(max-width: 991px) {
-   .container {
-      gap: 20px;
-      flex-wrap: wrap;
-   }
-}
-
-@media (max-width: 480px) {
-   .container {
-      flex-direction: column;
-      gap: 20px;
-   }
-
-   select {
-      margin-left: 22px;
-      width: 184px;
-      background-position: 168px center;
-   }
 }

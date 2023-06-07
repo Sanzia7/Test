@@ -9,46 +9,37 @@ import {
    sortPriceDownProductsAction,
    sortPriceUpProductsAction,
 } from "../../store/reducers/productsReducer";
-import { filterRangeAction, filterSaleAction, sortDefaultAction, sortNameAction, sortPriceDownAction, sortPriceUpAction } from "../../store/reducers/categoryReducer";
+import Input from "../UI/Input/Input";
+// import { SlArrowDown } from 'react-icons/sl'
 
-export default function Filter({ sortSaleShow, location }) {
-   const dispatch = useDispatch();
 
-   const saleHandler = (e) => {
-      dispatch(
-         location === "category"
-            ? filterSaleAction(e.target.checked)
-            : filterSaleProductsAction(e.target.checked)
-      );
-   };
+export default function Filter({ type }) {
+   const dispatch = useDispatch()
+
+   const discountHandler = (e) => {
+      dispatch(filterSaleProductsAction(e.target.checked))
+   }
 
    const sortOptionHandler = (e) => {
       e.preventDefault();
       switch (e.target.value) {
+
          case "default":
-            dispatch(location === "category"
-                  ? sortDefaultAction()
-                  : sortDefaultProductsAction())
+            dispatch(sortDefaultProductsAction())
             break
-         
+
          case 'priceDown':
-            dispatch(location === 'category'
-               ? sortPriceDownAction()
-               : sortPriceDownProductsAction())
+            dispatch(sortPriceDownProductsAction())
             break
-         
+
          case 'priceUp':
-            dispatch(location === 'category'
-               ? sortPriceUpAction()
-               : sortPriceUpProductsAction())
+            dispatch(sortPriceUpProductsAction())
             break
-         
+
          case 'name':
-            dispatch(location === 'category'
-               ? sortNameAction()
-               : sortNameProductsAction())
+            dispatch(sortNameProductsAction())
             break
-         
+
          default:
             break
       }
@@ -70,16 +61,14 @@ export default function Filter({ sortSaleShow, location }) {
          range.to = value
          setToValue(Number(value))
       }
-      dispatch(location === 'category'
-         ? filterRangeAction(range)
-         : filterRangeProductsAction())
+      dispatch(filterRangeProductsAction())
    }
 
    return (
-      <div className={s.container}>
-         <div className={s.price}>
-            <label className={s.price_title}>Price</label>
-            <input
+      <div className={s.filter_container}>
+         <div className={s.filter_price}>
+            <label className={s.filter_price_title}>Price</label>            
+            <Input
                type={"number"}
                name={"from"}
                step={'.1'}
@@ -88,7 +77,7 @@ export default function Filter({ sortSaleShow, location }) {
                onChange={changeHandler}
                value={fromValue}
             />
-            <input
+            <Input
                type={"number"}
                name={"to"}
                placeholder={"to"}
@@ -98,27 +87,28 @@ export default function Filter({ sortSaleShow, location }) {
                value={toValue}
             />
          </div>
-         {sortSaleShow && (
-            <div className={s.sale}>
-               <label className={s.sale_title}>
-                  Sales
-                  <input
+         {type !== 'sale' && (
+            <div className={s.filter_discount}>
+               <label className={s.filter_discount_title}>
+                  Discounted products
+                  <Input
                      type={"checkbox"}
-                     name={"check_sale"}
-                     onClick={saleHandler}
+                     name={"check_discount"}
+                     onClick={discountHandler}
                   />
                   <span className={s.checkmark}></span>
                </label>
             </div>
          )}
-         <div className={s.sort}>
-            <label className={s.sort_title}>Sorted</label>
+         <div className={s.filter_sort}>
+            <label className={s.filter_sort_title}>Sorted</label>
             <select name="sort_by" onInput={sortOptionHandler}>
                <option value="default">default</option>
                <option value="priceDown">price-down</option>
                <option value="priceUp">price-up</option>
-               <option value="name">name</option>
+               <option value="name">by title</option>
             </select>
+            {/* <SlArrowDown  className={s.select_icon}/> */}
          </div>
       </div>
    )
