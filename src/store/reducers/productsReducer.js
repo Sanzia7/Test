@@ -39,10 +39,14 @@ export const productsReducer = (state = defaultState, action) => {
       
       case LOAD_PRODUCTS_SALE:
          return {
-            page: { title: 'Sale' },
+            page: { title: 'Sale of products' },
             list: state.list.filter(
                item => item.discont_price
-            )
+            ).map(item => ({
+               ...item,
+               saleShow: true,
+               rangeShow: true
+            }))
          }
       
       case FILTER_SALE_PRODUCTS:

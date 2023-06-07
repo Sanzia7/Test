@@ -1,9 +1,22 @@
-.products_container {
-   margin-top: 80px;
-   display: grid;
+.products_page {
+   margin-top: 70px;
+   /* display: grid;
    grid-template-columns: repeat(auto-fit, 318px);
    justify-items: center;
    justify-content: center;
    grid-column-gap: 35px;
-   grid-row-gap: 55px;
+   grid-row-gap: 55px; */
+}
+
+.products_page h2 {
+   font-weight: 600;
+   font-size: 28px;
+   color: darkcyan;
+   margin-bottom: 80px;
+}
+
+@media (max-width: 762px) {
+   .products_page {
+      margin-top: 100px;
+   }
 }

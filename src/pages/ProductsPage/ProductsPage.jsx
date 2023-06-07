@@ -1,29 +1,38 @@
 import React, { useEffect } from 'react'
 import s from './style.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from '../../asyncActions/products'
+import { fetchCategory } from '../../asyncActions/products'
 import AllProducts from '../../components/AllProducts/AllProducts'
+import { useParams } from 'react-router-dom'
+import { fetchProducts } from '../../asyncActions/products'
+import { loadProductsSaleAction } from '../../store/reducers/productsReducer'
 
-export default function ProductsPage() {
+export const ProductsPage = ({ type }) => {
+   const { id } = useParams()
    const dispatch = useDispatch()
 
-   useEffect(() => {
-      dispatch(fetchProducts())
-      window.scrollTo(0, 0)
-   }, [])
+   const page = useSelector(store => store.list.page)
+   const list = useSelector(store => store.list.list).filter((item) => item.saleShow && item.rangeShow)
 
-   const products = useSelector(store => store.products)
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+      if (type === 'category') {
+         dispatch(fetchCategory(id))
+      } else {
+         dispatch(fetchProducts(type))
+         if (type === 'sale') {
+            dispatch(loadProductsSaleAction())
+         }
+      }
+   }, [id, type])
 
 
    return (
-      <div className={s.products_container}>
-         <AllProducts
-            products={products}
-            title={'All Products'}
-            filterShow={true}
-            saleShow={true}
-            location='all_products'
-         />
+      <div className={s.products_page}>
+         <h2>{page.title}</h2>
+         <Filter type={type} />
+         <AllProducts products={list}/>
       </div>
    )
 }
