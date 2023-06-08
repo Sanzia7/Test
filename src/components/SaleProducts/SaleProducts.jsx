@@ -5,13 +5,13 @@ import AllProducts from '../AllProducts/AllProducts'
 import { fetchProducts } from '../../asyncActions/products';
 
 export default function SaleProducts() {
-   let dispatch = useDispatch()
+
+   const dispatch = useDispatch()
 
    useEffect(()=> dispatch(fetchProducts('sale')), [dispatch])
 
-   const products = useSelector((store) => store.productList.productList)
-      // .filter((item) => item.discont_price)
-      // .slice(0, 4)
+   const products = useSelector((store) => store.products.productList)
+   
    const productSale = []
    if (products.length !== 0) {
       for (let i = 0; i < 4; i++) {
@@ -32,3 +32,5 @@ export default function SaleProducts() {
 }
 
 
+ // .filter((item) => item.discont_price)
+      // .slice(0, 4)

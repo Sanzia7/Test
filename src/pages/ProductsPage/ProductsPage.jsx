@@ -13,7 +13,7 @@ export const ProductsPage = ({ type }) => {
    const dispatch = useDispatch()
 
    const titlePage = useSelector((store) => store.products.titlePage)
-   const listProducts = useSelector(store => store.products.listProducts).filter((item) => item.saleShow && item.rangeShow)
+   const productList = useSelector(store => store.products.productList).filter((item) => item.saleShow && item.rangeShow)
 
 
    useEffect(() => {
@@ -33,7 +33,7 @@ export const ProductsPage = ({ type }) => {
       <div className={s.products_page}>
          <h2>{titlePage.title}</h2>
          <Filter type={type} />
-         <AllProducts products={listProducts}/>
+         <AllProducts products={productList}/>
       </div>
    )
 }
