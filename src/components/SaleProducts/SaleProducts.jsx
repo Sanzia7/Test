@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import s from './SaleProducts'
 import { useDispatch, useSelector } from 'react-redux';
 import AllProducts from '../AllProducts/AllProducts'
-import { fetchProduct } from '../../asyncActions/products';
+import { fetchProducts } from '../../asyncActions/products';
 
 export default function SaleProducts() {
    let dispatch = useDispatch()
 
-   useEffect(()=> dispatch(fetchProduct('sale')), [dispatch])
+   useEffect(()=> dispatch(fetchProducts('sale')), [dispatch])
 
    const products = useSelector((store) => store.products.list)
       .filter((item) => item.discont_price)

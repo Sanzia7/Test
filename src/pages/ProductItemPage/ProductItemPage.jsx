@@ -1,41 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import s from "./style.module.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import URL from "../../asyncActions/url";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 import Button from "../../components/UI/Button/Button";
-import { fetchProductInfo } from "../../asyncActions/products";
+
 import { ProductPrice } from "../../components/ProductPrice/ProductPrice";
 
 export default function ProductItemPage() {
    const { id } = useParams();
    const dispatch = useDispatch();
-   const navigate = useNavigate();
-
-   const product = useSelector((store) => store.product);
-
+   const [product, setProduct] = useState([])
+   
    useEffect(() => {
       window.scrollTo(0, 0);
-   }, []);
+      const productURL = URL + '/products/'
+      fetch(`${productURL}${id}`)
+         .then(res => res.json())
+      .then(data => setProduct(data))
+   }, [id]);
 
-   useEffect(() => {
-      if (product.status === '*') {
-         navigate('/*');
-      }
-   }, [navigate, product]);
-
-
-   useEffect(() => {
-      id && dispatch(fetchProductInfo(`/products/${id}`));
-   }, [dispatch, id]);
-
-
-   const { title, image, discont_price, price, description } = productItem || {};
+   const productInfo = product ? Object.assign({}, ...product) : {}
+   const { title, image, discont_price, price, description } = productInfo
+   // const discount_value = Math.floor(100 - discont_price * 100 / price);
 
    const addToCart = (e) => {
       e.preventDefault()
-      dispatch(addToCartAction(product))
+      dispatch(addToCartAction(product[0]))
    }
 
    // const sale = discont_price && Math.round(((price - discont_price) * 100) / price)

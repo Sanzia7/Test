@@ -40,7 +40,6 @@ export default function CartOrder() {
                properties={'btn_order'}
             />
          </form>
-
       </div>
    )
 }

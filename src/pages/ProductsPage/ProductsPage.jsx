@@ -6,6 +6,7 @@ import AllProducts from '../../components/AllProducts/AllProducts'
 import { useParams } from 'react-router-dom'
 import { fetchProducts } from '../../asyncActions/products'
 import { loadProductsSaleAction } from '../../store/reducers/productsReducer'
+import Filter from '../../components/Filter/Filter'
 
 export const ProductsPage = ({ type }) => {
    const { id } = useParams()

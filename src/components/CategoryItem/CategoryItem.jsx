@@ -7,7 +7,7 @@ export default function CategoryItem({id, title, image }) {
       <div className={s.category_item}>
          <div className={s.category_img}>
             <img src={`${URL}/${image}`} alt={title} />
-            <h3 className={s.title}>{title}</h3>
+            <h3>{title}</h3>
          </div>
       </div>
    )

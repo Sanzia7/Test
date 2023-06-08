@@ -9,7 +9,7 @@ import {
    sortPriceDownProductsAction,
    sortPriceUpProductsAction,
 } from "../../store/reducers/productsReducer";
-import Input from "../UI/Input/Input";
+
 // import { SlArrowDown } from 'react-icons/sl'
 
 
@@ -68,7 +68,7 @@ export default function Filter({ type }) {
       <div className={s.filter_container}>
          <div className={s.filter_price}>
             <label className={s.filter_price_title}>Price</label>            
-            <Input
+            <input
                type={"number"}
                name={"from"}
                step={'.1'}
@@ -77,7 +77,7 @@ export default function Filter({ type }) {
                onChange={changeHandler}
                value={fromValue}
             />
-            <Input
+            <input
                type={"number"}
                name={"to"}
                placeholder={"to"}
@@ -91,7 +91,7 @@ export default function Filter({ type }) {
             <div className={s.filter_discount}>
                <label className={s.filter_discount_title}>
                   Discounted products
-                  <Input
+                  <input
                      type={"checkbox"}
                      name={"check_discount"}
                      onClick={discountHandler}

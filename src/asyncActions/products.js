@@ -27,13 +27,5 @@ export const fetchProducts = (type) => {
    }
 }
 
-export const fetchProductInfo = (product) => {
-   return function (dispatch) {
-      fetch(URL + product)
-         .then((res) => res.json())
-         .then((data) => dispatch(loadProductInfoAction(data)));
-   };
-};
-
 
 
