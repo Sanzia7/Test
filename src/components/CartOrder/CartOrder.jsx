@@ -30,9 +30,10 @@ export default function CartOrder() {
             <p className={s.amount}>{totalSum} $</p>
          </div>
          <form onSubmit={onSubmit}>
-            <input type="tel"
+            <input type={'tel'}
                name='phone'
                placeholder='Phone number'
+               pattern={'[+]{1}[0-9]{11}'}
                required
             />
             <Button

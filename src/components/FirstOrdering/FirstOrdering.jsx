@@ -66,6 +66,7 @@ export default function FirstOrdering() {
                         <PhoneInput
                            country={'de'}
                            value={phone}
+                           pattern={'[+]{1}[0-9]{11}'}
                            onChange={phone => setPhone(phone)}   />
                   </div>
                   <ButtonLight text='Get Your discount' />

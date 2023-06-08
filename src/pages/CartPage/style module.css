@@ -1,8 +1,14 @@
-.container {
+.cart_container {
+   margin: 0 auto;
+   max-width: 1440px;
+   padding-top: 20px;
+}
+
+.cart_wrapper {
    margin: 50px 30px;
 }
 
-h2 {
+.cart_wrapper h2 {
    font-size: 22px;
    font-weight: 600;
    margin-bottom: 70px;

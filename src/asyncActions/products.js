@@ -1,6 +1,6 @@
 import URL from "./url"
 import { loadProductsAction, loadProductsSaleAction } from "../store/reducers/productsReducer"
-import { loadProductInfoAction } from "../store/productReducer"
+
 
 const categoryURL = URL + '/categories/'
 const productsURL = URL + '/products/all'

@@ -13,8 +13,9 @@ export default function CartPage() {
    useEffect(() => window.scrollTo(0, 0), [])
    const cart = useSelector(store => store.cart)
 
-   return (      
-         <div className={s.container}>
+   return (
+      <div className={s.cart_container}>
+         <div className={s.cart_wrapper}>
             <h2>Shopping Cart</h2>
             <NavLink to='/products/all'>
                <div className={s.link_back}>
@@ -24,11 +25,12 @@ export default function CartPage() {
             </NavLink>
             <div className={s.shopping}>
                {cart.length !== 0
-                     ? <CartShopping />
-                     : <p>Your Cart is empty</p>
+                  ? <CartShopping />
+                  : <p>Your Cart is empty</p>
                }
                <CartOrder />
             </div>
-         </div>  
+         </div>
+      </div>
    )
 }
