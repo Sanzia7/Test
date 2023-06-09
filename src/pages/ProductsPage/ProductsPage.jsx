@@ -12,8 +12,8 @@ export const ProductsPage = ({ type }) => {
    const { id } = useParams()
    const dispatch = useDispatch()
 
-   const titlePage = useSelector((store) => store.products.titlePage)
-   const productList = useSelector(store => store.products.productList).filter((item) => item.saleShow && item.rangeShow)
+   const titlePage = useSelector((store) => store.productList.titlePage)
+   const productList = useSelector(store => store.productList.productList).filter((item) => item.saleShow && item.rangeShow)
 
 
    useEffect(() => {

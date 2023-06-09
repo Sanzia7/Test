@@ -65,8 +65,8 @@ export default function Filter({ type }) {
    }
 
    return (
-      <div className={s.filter_container}>
-         <div className={s.filter_price}>
+      <div className={s.container}>
+         <div className={s.price}>
             <label className={s.filter_price_title}>Price</label>            
             <input
                type={"number"}
@@ -88,8 +88,8 @@ export default function Filter({ type }) {
             />
          </div>
          {type !== 'sale' && (
-            <div className={s.filter_discount}>
-               <label className={s.filter_discount_title}>
+            <div className={s.discount}>
+               <label className={s.discount_title}>
                   Discounted products
                   <input
                      type={"checkbox"}
@@ -100,8 +100,8 @@ export default function Filter({ type }) {
                </label>
             </div>
          )}
-         <div className={s.filter_sort}>
-            <label className={s.filter_sort_title}>Sorted</label>
+         <div className={s.sort}>
+            <label className={s.sort_title}>Sorted</label>
             <select name="sort_by" onInput={sortOptionHandler}>
                <option value="default">default</option>
                <option value="priceDown">price-down</option>

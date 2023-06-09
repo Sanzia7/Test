@@ -1,7 +1,7 @@
 .products_list {
-   margin-top: 80px;
+   margin-top: 87px;
    display: grid;
-   grid-template-columns: repeat(auto-fit, 318px);
+   grid-template-columns: repeat(auto-fit, 320px);
    justify-items: center;
    justify-content: center;
    grid-column-gap: 35px;

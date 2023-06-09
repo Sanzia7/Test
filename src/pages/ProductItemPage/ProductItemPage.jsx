@@ -23,7 +23,7 @@ export default function ProductItemPage() {
 
    const productInfo = product ? Object.assign({}, ...product) : {}
    const { title, image, discont_price, price, description } = productInfo
-   // const discount_value = Math.floor(100 - discont_price * 100 / price);
+   //const discount_value = Math.floor(100 - discont_price * 100 / price);
 
    const addToCart = (e) => {
       e.preventDefault()
