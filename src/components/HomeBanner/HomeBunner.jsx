@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 export default function HomeBanner() {
    return (
       <div className={s.banner_container}>
-         
-            <h1 className="">Welcome to our Green Peace</h1>
+            <h1>Welcome to our Green Peace</h1>
             <p className={s.info}>
-               We offer You our <br />
+               We offer you <br />
                <span>New Season</span>
             </p>
-            <Link to="/products/sale">
+            <Link to="/sales/all">
                <ButtonLight text="Sale" />
             </Link>
          
