@@ -1,16 +1,16 @@
-.filter_container {
+.container {
    display: flex;
    gap: 50px;
    align-items: center;
    flex-wrap: wrap;
-   margin-bottom: var(--margin-main);
+   margin-bottom: 80px;
 }
 
 input,
 select {
    height: 40px;
    border-radius: 7px;
-   border: 1px solid var(--black-color);
+   border: 1px solid gray;
    outline: none;
 }
 
@@ -19,12 +19,12 @@ select {
    padding-left: 10px;
    color: #797979;
    margin-left: 50px;
-   background-color: var(--white-color);
+   background-color: whitesmoke;
 }
 
 label {
    font-weight: 600;
-   font-size: var(--info-text);
+   font-size: 20px;
    margin-right: 5px;
 }
 
@@ -32,24 +32,24 @@ label {
    width: 100px;
 }
 
-.filter_price,
-.filter_discount,
-.filter_sort {
+.price,
+.discount,
+.sort {
    display: flex;
    align-items: center;
 }
 
-.filter_price input,
-.filter_sort input {
+.price input,
+.sort input {
    padding-left: 10px;
 }
 
-.filter_price {
+.price {
    display: flex;
    gap: 15px;
 }
 
-.filter_discount {
+.discount {
    margin-right: 80px;
 }
 
@@ -63,7 +63,7 @@ label {
 
 /* -----------checkbox--------- */
 
-.filter_discount_title {
+.discount_title {
    position: relative;
    cursor: pointer;
    font-size: 22px;
@@ -73,7 +73,7 @@ label {
    user-select: none;
 }
 
-.filter_discount_title input {
+.discount_title input {
    position: absolute;
    opacity: 0;
    cursor: pointer;
@@ -88,16 +88,16 @@ label {
    right: -70px;
    height: 40px;
    width: 40px;
-   border-radius: 7px;
-   border: 1px solid black;
+   border-radius: 8px;
+   border: 1px solid darkgreen;
 }
 
-.filter_discount_title:hover input~.checkmark {
-   background-color: var(--white-color);
+.discount_title:hover input~.checkmark {
+   background-color: whitesmoke;
 }
 
-.filter_discount_title input:checked~.checkmark {
-   background-color: var(--primary-color);
+.discount_title input:checked~.checkmark {
+   background-color: greenyellow;
 }
 
 .checkmark::after {
@@ -106,11 +106,11 @@ label {
    display: none;
 }
 
-.filter_discount_title input:checked~.checkmark::after {
+.discount_title input:checked~.checkmark::after {
    display: block;
 }
 
-.filter_discount_title .checkmark::after {
+.discount_title .checkmark::after {
    left: 13px;
    top: 3px;
    width: 11px;
@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* -------------- select ------------- */
-.filter_sort select {
+.sort select {
    appearance: none;
    -moz-appearance: none;
    -webkit-appearance: none;

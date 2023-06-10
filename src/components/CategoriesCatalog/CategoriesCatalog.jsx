@@ -8,7 +8,7 @@ import ButtonLight from '../UI/ButtonLight/ButtonLight'
 export default function CategoriesCatalog({categories, btnShow, title}) {
 
   return (
-    <div className={s.wrapper_catalog} id='categories'>
+    <div id='categories' className={s.wrapper_catalog} >
       <div className={s.header}>
         <h2>{title}</h2>
         {btnShow && (

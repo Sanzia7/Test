@@ -22,7 +22,7 @@ export default function ProductItemPage() {
    console.log('product', product)
    const productInfo = product?.[0] ? product[0] : { title: '', image: '', discont_price: '', price: '', description: '' };
    const { title, image, discont_price, price, description } = productInfo
-   // const discount_value = Math.floor(100 - discont_price * 100 / price);
+   //const discount_value = Math.floor(100 - discont_price * 100 / price);
 
    console.log(title, image, discont_price, price, description)
 
