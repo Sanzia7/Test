@@ -1,5 +1,5 @@
 .header {
-   margin: 0 30px;
+   margin: 30px 30px 70px;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -16,15 +16,19 @@
 
 .nav_menu {
    display: flex;
+   justify-content: flex-end;
+   width: 50%;
    gap: 50px;
 }
 
 .nav_menu a {
-   color: darkgreen;
+   font-size: 16px;
+   color: black;
+   line-height: 130%;
+   font-weight: 500;
+
    text-decoration: none;
    transition: all 0.6s ease;
-   font-weight: 600;
-   font-family: serif;
 }
 
 .nav_menu a:hover {

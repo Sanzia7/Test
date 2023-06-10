@@ -15,9 +15,11 @@ export const ProductsPage = ({ type }) => {
    const titlePage = useSelector((store) => store.products.titlePage)
    const productList = useSelector(store => store.products.productList).filter((item) => item.saleShow && item.rangeShow)
 
+   console.log('productList', productList);
 
    useEffect(() => {
       window.scrollTo(0, 0);
+      console.log('type', type);
       if (type === 'category') {
          dispatch(fetchCategory(id))
       } else {
@@ -28,7 +30,7 @@ export const ProductsPage = ({ type }) => {
       }
    }, [id, type])
 
-
+   
    return (
       <div className={s.products_page}>
          <h2>{titlePage.title}</h2>

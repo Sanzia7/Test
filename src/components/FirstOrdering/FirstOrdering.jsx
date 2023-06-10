@@ -7,7 +7,32 @@ import 'react-phone-input-2/lib/style.css'
 import ButtonLight from '../UI/ButtonLight/ButtonLight'
 
 const sendPhone = (data) => {
-   return axios.post(`${URL}/sale/sand`, data)
+   return axios.post(`http://localhost:3333/sale/send`, data)
+}
+
+const phoneLibInputStyle = {
+   color: '#6C6C6C',
+   height: '50px',
+   borderRadius: '15px',
+   borderColor: 'white',
+   fontFamily: 'Montserrat',
+   letterSpacing: '0.03em',
+   fontSize: '16px',
+   lineHeight: '120%',
+   paddingLeft: '65px'
+}
+
+const phoneLibDropdownStyle = {
+   color: '#6C6C6C',
+   background: 'white',
+   height: '50px',
+   borderRadius: '15px 0 0 15px',
+   border: 'none',
+   fontFamily: 'Montserrat',
+   letterSpacing: '0.03em',
+   fontSize: '16px',
+   lineHeight: '120%',
+   paddingLeft: '15px'
 }
 
 export default function FirstOrdering() {
@@ -47,7 +72,7 @@ export default function FirstOrdering() {
                <h3>
                   <p>Thank You!</p>
                   <p>You successfully issued Your first order.</p>
-                  <p>Congratulate!</p>
+                  <p>Congratulations!</p>
                </h3>
             </div>
          ) : (
@@ -67,9 +92,12 @@ export default function FirstOrdering() {
                            country={'de'}
                            value={phone}
                            pattern={'[+]{1}[0-9]{11}'}
-                           onChange={phone => setPhone(phone)}   />
+                           onChange={phone => setPhone(phone)} 
+                           inputStyle={phoneLibInputStyle}
+                           buttonStyle={phoneLibDropdownStyle}
+                        />
                   </div>
-                  <ButtonLight text='Get Your discount' />
+                  <ButtonLight text='Get a discount' />
                </form>
             </div>
          )}

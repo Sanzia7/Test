@@ -1,6 +1,7 @@
 .products_list {
    margin-top: 80px;
-   display: grid;
+   display: flex;
+   flex-wrap: wrap;
    grid-template-columns: repeat(auto-fit, 318px);
    justify-items: center;
    justify-content: center;

@@ -12,10 +12,10 @@ export default function ProductItem({ product }) {
    const { id, image, title, price, discont_price } = product;
    const dispatch = useDispatch();
 
-   // const addToCart = (e) => {
-   //    e.preventDefault();
-   //    dispatch(addToCartAction(product));
-   // };
+   const addToCart = (e) => {
+      e.preventDefault();
+      dispatch(addToCartAction(product));
+   };
 
    return (
       <div className={s.item}>
@@ -46,7 +46,7 @@ export default function ProductItem({ product }) {
             <p style={{ fontWeight: 'bold', fontSize: '26px' }}>{price} €</p>
          )}
 
-         <button className={s.btn} onClick={() => dispatch(addToCartAction(id))}>
+         <button className={s.btn} onClick={event => addToCart(event)}>
             Add to card
          </button>
             {/* <div className={s.poduct_content}>

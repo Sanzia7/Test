@@ -3,31 +3,36 @@
    width: 100vw;
    height: 450px;
    margin: 0 auto;
-   background-image: url('./Nature_Beautiful.jpg');
+   color: white;
+   background-image: url('/src/media/houseplant.png');
    background-repeat: no-repeat;
-   background-size: auto;
+   background-size: contain;
+   background-position-x: right;
+   background-color: #A1E2EB;
    display: grid;
    grid-template-columns: max-content;
-   gap: 30px;
+   font-weight: 700;
+   /* gap: 30px; */
    padding: 50px;
 }
 
+
 .banner_container h1 {
-   font-size: 18px;
-   text-transform: uppercase;
-   font-weight: 600;
-   color: gold;
-   padding: 0 25px;
+   font-size: 40px;
+   /* text-transform: uppercase; */
+   /* font-weight: 600; */
+   /* color: gold; */
+   /* padding: 0 25px; */
 }
 
 .info {
    font-size: 32px;
-   color: white;
-   font-weight: 700;
+   /* color: white; */
+   /* font-weight: 700; */
 }
 
 .info span {
-   color: greenyellow;
+   /* color: greenyellow; */
    font-size: 50px;
-   font-weight: 900;
+   /* font-weight: 900; */
 }

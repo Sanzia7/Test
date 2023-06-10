@@ -10,6 +10,7 @@ import {
 } from '../../store/reducers/cartReducer';
 
 export default function Cart({ id, title, image, discont_price, price, count }) {
+   console.log({ id, title, image, discont_price, price, count })
    const dispatch = useDispatch();
 
    return (
@@ -22,7 +23,7 @@ export default function Cart({ id, title, image, discont_price, price, count }) 
                   <button onClick={() => dispatch(decrementCountAction(id))}>
                      -
                   </button>
-
+                  {count}
                   <button onClick={() => dispatch(incrementCountAction(id))}>
                      +
                   </button>

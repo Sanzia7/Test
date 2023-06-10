@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import URL from "../../asyncActions/url";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 import Button from "../../components/UI/Button/Button";
-
 import { ProductPrice } from "../../components/ProductPrice/ProductPrice";
 
 export default function ProductItemPage() {
@@ -18,12 +17,14 @@ export default function ProductItemPage() {
       const productURL = URL + '/products/'
       fetch(`${productURL}${id}`)
          .then(res => res.json())
-      .then(data => setProduct(data))
+         .then(data => setProduct(data))
    }, [id]);
-
-   const productInfo = product ? Object.assign({}, ...product) : {}
+   console.log('product', product)
+   const productInfo = product?.[0] ? product[0] : { title: '', image: '', discont_price: '', price: '', description: '' };
    const { title, image, discont_price, price, description } = productInfo
    // const discount_value = Math.floor(100 - discont_price * 100 / price);
+
+   console.log(title, image, discont_price, price, description)
 
    const addToCart = (e) => {
       e.preventDefault()
@@ -69,7 +70,7 @@ export default function ProductItemPage() {
 //                      </p>
 //                      <>
 //                         <p className={s.old_price}>{price} $</p>
-//                         <p className={s.sale}>-{discont} %</p>
+//                         <p className={s.sale}>-{discount} %</p>
 //                      </>
 //                   </div> 
 

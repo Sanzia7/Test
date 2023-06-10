@@ -11,7 +11,9 @@ import CartOrder from '../../components/CartOrder/CartOrder'
 export default function CartPage() {
 
    useEffect(() => window.scrollTo(0, 0), [])
-   const cart = useSelector(store => store.cart)
+   const cart = useSelector(store => store.cart);
+
+   console.log('cart', cart)
 
    return (
       <div className={s.cart_container}>

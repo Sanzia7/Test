@@ -1,20 +1,20 @@
 .btn_header {
    color: white;
-   background-color: rgb(2, 152, 2);
-   border: 1px solid green;
-   /* box-shadow: rgba(1, 41, 6, 0.24) 0px 3px 8px; */
-   box-shadow: 2px 3px 4px darkslategray;
-   padding: 8px 16px;
-   font-size: 18px;
-   font-weight: 500;
+   background: #339933;
+   border: 2px solid #339933;
    border-radius: 5px;
-   cursor: pointer;
-   transition: all 0.4s ease;
-}
 
-.btn_header:hover {
-   color: orangered;
-   background-color: lime;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   padding: 14px 30px 15px;
+   gap: 5px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
 }
 
 /* --------------------- */

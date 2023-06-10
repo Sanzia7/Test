@@ -1,19 +1,22 @@
 .btn {
    outline: none;
-   padding: 10px 20px;
-   font-size: 18px;
-   border: 1px solid green;
+   padding: 20px 40px;
+
+   font-weight: 700;
+   font-size: 25px;
+
+   border: none;
    border-radius: 8px;
    background-color: white;
-   color: green;
+   color: #2D2D2D;
    cursor: pointer;
    transition: all 0.2s ease;
 }
 
 .btn:hover {
-   background-color: greenyellow;
+   /* background-color: greenyellow;
    color: orangered;
    font-size: 20px;
-   /* border: 1px solid green; */
+   border: 1px solid green; */
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

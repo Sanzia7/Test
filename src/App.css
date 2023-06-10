@@ -12,24 +12,28 @@ html {
    font-size: 18px;
 
 
-   background-color: burlywood;
+   /* background-color: burlywood; */
    color: saddlebrown;
 }
 
 body {
-   background-color: burlywood;
+   /* background-color: burlywood; */
+}
+
+button, a {
+   text-decoration: none;
 }
 
 #root {
-   max-width: 1440px;
+   /* max-width: 1440px; */
    min-height: 100vh;
-   margin: 0 auto;
+   /* margin: 0 auto; */
 
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   background-color: bisque;
-   color: saddlebrown;
+   /* background-color: bisque; */
+   /* color: saddlebrown; */
 }
 
 ::-webkit-scrollbar {

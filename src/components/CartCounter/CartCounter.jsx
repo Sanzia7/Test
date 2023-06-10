@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux'
 export default function CartCounter() {
 
    const cart = useSelector(store => store.cart)
-
-   const cartCount = cart.reduce((acc, { count }) => acc + count, 2)
+   console.log(cart)
+   const cartCount = cart.reduce((acc, { count }) => acc + count, 0)
 
 
    return (

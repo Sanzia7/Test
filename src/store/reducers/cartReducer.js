@@ -19,9 +19,11 @@ const findProduct = (state, payload) => {
 
 const writeToStorage = (newState) => localStorage.setItem('cart', JSON.stringify(newState))
 export const cartReducer = (state = defaultState, action) => {
+   console.log(state, action.type);
    switch (action.type) {
       case ADD_TO_CART:
          const newState = findProduct(state, action.payload)
+         console.log('newState', newState)
          writeToStorage(newState)
          return newState
       

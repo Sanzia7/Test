@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import s from "./style.module.css";
 import Logo from "../../media/logo.png";
+import Cart from "../../media/cart.png";
 import { NavLink } from "react-router-dom";
 import CartCounter from "../CartCounter/CartCounter";
 import { SlHandbag } from "react-icons/sl";
@@ -20,8 +21,8 @@ export default function Header() {
 
    const links = [
       { id: 1, title: "Main Page", link: "/" },
-      { id: 2, title: "All Products", link: "/products/all" },
-      { id: 3, title: "All Sales", link: "/sales/all" },
+      { id: 2, title: "All products", link: "/products/all" },
+      { id: 3, title: "All sales", link: "/sales/all" },
    ];
 
    useEffect(() => {
@@ -49,7 +50,7 @@ export default function Header() {
          </div>
          <div className={s.cart_wrapper}>
             <NavLink to="/cart">
-               <SlHandbag className={s.cart} />
+               <img src={Cart} className={s.cart} alt="logo" />
                <CartCounter className={s.cart_counter} />
             </NavLink>
          </div>

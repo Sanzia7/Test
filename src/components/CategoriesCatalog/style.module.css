@@ -1,5 +1,5 @@
 .wrapper_catalog {
-   margin: 40px 30px 90px;
+   margin: 40px 50px 90px;
 }
 
 .header {
@@ -9,10 +9,10 @@
    gap: 70px;
 }
 
-.headre h2 {
+.header h2 {
    font-size: 28px;
    font-weight: 600;
-   color: green;
+   color: #000000;
 }
 
 /* .btn_categories {
@@ -39,7 +39,7 @@
    grid-auto-rows: auto;
    gap: 32px; */
    margin: 80px 0 40px;
-   display: grid;
+   display: flex;
    grid-template-columns: repeat(auto-fit, 318px);
    justify-items: center;
    justify-content: center;

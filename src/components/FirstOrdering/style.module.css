@@ -1,39 +1,67 @@
 .order {
+   font-family: 'Montserrat';
    display: flex;
    margin: 20px 0;
-   background: linear-gradient(to right, #f1dd055e, rgba(3, 94, 23, 0.735)), url('./media/discount.jpg');
+   padding: 20px 0;
+   font-weight: 700;
+   background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+   /* background: linear-gradient(to right, #f1dd055e, rgba(3, 94, 23, 0.735)), url('./media/discount.jpg'); */
 }
 
 .order p {
-   font: 1.5em serif;
+   /* font: 1.5em; */
    text-transform: capitalize;
-}
+}  
 
 .order>div {
    display: flex;
    justify-content: space-evenly;
-   align-items: center;
+   /* align-items: center; */
+   flex-direction: column;
+}
+
+.react-tel-input {
+   height: 50px;
+}
+
+.react-tel-input .form-control {
+   height: 50px;
+    background: white;
+    border: none;
+}
+
+.react-tel-input .flag-dropdown {
+   border: none;
+   background: white;
 }
 
 .img_order,
 .text_order {
    width: 50%;
    height: 100%;
-   max-height: 300px;
+   /* max-height: 300px; */
    padding: 40px 0;
+}
+
+.text_order button {
+   border-radius: 25px;
+   background-color: inherit;
+   border: 2px solid #FFFFFF;
+   color: white;
+   margin: 10px 0;
 }
 
 .img_order img {
    width: 100%;
    height: 100%;
-   max-height: 250px;
+   max-height: 300px;
    object-fit: contain;
 }
 
 .text_order h3 {
    font-size: 1.5em;
    text-transform: uppercase;
-   color: greenyellow;
+   color: white;
    margin: 0 0 20px 0;
    line-height: 2.5em;
 }

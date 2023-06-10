@@ -16,7 +16,7 @@ export default function CategoriesCatalog({categories, btnShow, title}) {
             {/* <button className={s.btn_categories}>
               All Categories
             </button> */}
-            <ButtonLight text='All Categories' />
+            {/* <ButtonLight text='All Categories' /> */}
           </NavLink>
         )}
       </div>
